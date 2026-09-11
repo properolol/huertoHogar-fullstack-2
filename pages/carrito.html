@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - HuertoHogar</title>
+</head>
 
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+
+        <a href="./home.html">
+            <img id="logo-navbar" src="../img/logo.ico" alt="Logo HuertoHogar">
+        </a>
+
+        <ul>
+            <li><a href="./home.html">Inicio</a></li>
+            <li><a href="./about-us.html">Nosotros</a></li>
+            <li><a href="./contact.html">Contacto</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./product/products.html">Productos</a></li>
+        </ul>
+
+        <a id="cart-button" href="./carrito.html">
+            <span>Carrito</span>
+        </a>
+
+        <a id="login-button" href="./log-in.html">
+            <p>Iniciar sesión</p>
+        </a>
+
+    </nav>
+
+
+    <!-- Contenido principal -->
+    <main>
+
+        <h1>Mi carrito</h1>
+
+        <section class="carrito">
+
+            <!-- Productos del carrito -->
+            <div class="carrito-productos">
+
+                <h2>Productos seleccionados</h2>
+
+                <article class="producto-carrito">
+
+                    <div class="producto-info">
+
+                        <img src="../img/manzana.jpg"
+                             alt="Manzanas Fuji">
+
+                        <div>
+                            <h3>Manzanas Fuji</h3>
+                            <p>$1.200 por kg</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="producto-cantidad">
+
+                        <button type="button">-</button>
+
+                        <span>1</span>
+
+                        <button type="button">+</button>
+
+                    </div>
+
+
+                    <div class="producto-subtotal">
+
+                        <p>Subtotal: $1.200</p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-eliminar">
+                        Eliminar
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <!-- Resumen del carrito -->
+            <aside class="resumen-carrito">
+
+                <h2>Resumen de compra</h2>
+
+                <p>
+                    Subtotal:
+                    <span>$1.200</span>
+                </p>
+
+                <p>
+                    IVA:
+                    <span>$228</span>
+                </p>
+
+                <hr>
+
+                <p class="total-carrito">
+                    <strong>Total:</strong>
+                    <span>$1.428</span>
+                </p>
+
+
+                <div class="acciones-carrito">
+
+                    <a href="./product/products.html">
+                        Seguir comprando
+                    </a>
+
+                    <button type="button">
+                        Finalizar compra
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+
+            <h3>HuertoHogar</h3>
+
+            <p>
+                Del campo al hogar productos frescos y saludables.
+            </p>
+
+            <ul id="RRSS"></ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Navegación</h3>
+
+            <ul>
+
+                <li>
+                    <a href="./home.html">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="./about-us.html">Nosotros</a>
+                </li>
+
+                <li>
+                    <a href="./product/products.html">Productos</a>
+                </li>
+
+                <li>
+                    <a href="./blog.html">Blog</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Ayuda</h3>
+
+            <a href="./FAQ.html">
+                Preguntas frecuentes
+            </a>
+
+            <a href="./contact.html">
+                <p>Contacto</p>
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Ubicaciones</h3>
+
+            <a href="./about-us.html#ubicaciones">
+                Ver nuestras ubicaciones
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
