@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #F7F5EF;
+    color: #263238;
+    min-height: 100vh;
+}
+
+
+.menu-admin {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 30px 20px;
+}
+
+
+.logo-admin {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-admin h2 {
+    font-family: "Poppins", sans-serif;
+    color: #2E7D32;
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.logo-admin img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.logo-admin p {
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.menu-admin nav ul {
+    list-style: none;
+}
+
+.menu-admin nav ul li {
+    margin-bottom: 10px;
+}
+
+.menu-admin nav ul li a {
+    display: block;
+    padding: 12px 15px;
+    color: #263238; 
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.menu-admin nav ul li a:hover {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+
+.menu-admin nav ul li a.activo {
+    background-color: #2E7D32;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+.contenido-admin {
+    margin-left: 230px;
+    padding: 35px 45px;
+    min-height: 100vh;
+}
+
+
+.encabezado-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.encabezado-admin h1 {
+    font-family: "Poppins", sans-serif;
+    color: #2E7D32;
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.encabezado-admin p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+.boton-volver {
+    display: inline-block;
+    padding: 11px 18px;
+    background-color: white;
+    color: #2E7D32;
+    border: 2px solid #2E7D32;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #2E7D32;
+    color: white;
+}
+
+
+.seccion-formulario {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;
+}
+
+.seccion-formulario h2 {
+    font-family: "Poppins", sans-serif;
+    color: #2E7D32;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+
+#formulario-editar-usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+}
+
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.campo-formulario label {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #263238;
+}
+
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #D5D5D5;
+    border-radius: 7px;
+    background-color: white;
+    color: #263238;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.12);
+}
+
+
+.campo-formulario small {
+    min-height: 18px;
+    margin-top: 5px;
+    color: #D32F2F;
+    font-size: 12px;
+}
+
+
+.botones-formulario {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #EEEEEE;
+}
+
+
+.botones-formulario button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2E7D32;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botones-formulario button:hover {
+    background-color: #256628;
+}
+
+
+.botones-formulario a {
+    padding: 11px 22px;
+    border: 1px solid #D5D5D5;
+    border-radius: 8px;
+    background-color: white;
+    color: #263238;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.botones-formulario a:hover {
+    background-color: #F1F1F1;
+}
+
+
+@media (max-width: 900px) {
+
+    .menu-admin {
+        width: 200px;
+    }
+
+    .contenido-admin {
+        margin-left: 200px;
+        padding: 30px;
+    }
+
+    #formulario-editar-usuario {
+        grid-template-columns: 1fr;
+    }
+
+    .botones-formulario {
+        grid-column: 1;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .menu-admin {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .logo-admin {
+        margin-bottom: 20px;
+    }
+
+    .menu-admin nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menu-admin nav ul li {
+        margin-bottom: 0;
+    }
+
+    .menu-admin nav ul li a {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .contenido-admin {
+        margin-left: 0;
+        padding: 25px 15px;
+    }
+
+    .encabezado-admin {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .encabezado-admin h1 {
+        font-size: 27px;
+    }
+
+    .seccion-formulario {
+        padding: 20px;
+    }
+
+    .botones-formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botones-formulario button,
+    .botones-formulario a {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: #2E7D32;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+footer h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #E8F5E9;
+    line-height: 1.5;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer ul li a {
+    color: #E8F5E9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+    footer {
+        margin-left: 200px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    footer {
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+}

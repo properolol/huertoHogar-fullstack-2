@@ -3,41 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-in</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/log-in.css">
 </head>
 <body>
     <header>
-        <div class="login">
-            <h1>HuertoHogar</h1>
-        </div>
-
         <nav id="navbar">
-            <a href="./home.html"> <img id="logo-navbar" src="./../img/logo.ico" alt="logo"></a>
+            <div class="marca">
+                <a href="./home.html"> <img id="logo-navbar" src="./img/logo.ico" alt="logo"></a>
+                <a href="./home.html" class="nombre-sitio">HuertoHogar</a>
+            </div>
             <ul>
                 <li><a href="./home.html">Inicio</a></li>
                 <li><a href="./about-us.html">Nosotros</a></li>
                 <li><a href="./contact.html">Contacto</a></li>
-                <li><a href="./new-blog.html">Blog</a></li>
+                <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./product/products.html">Productos</a></li>
             </ul>
             <a id="car-button" href="./carrito.html"><img src="" alt=""><span>Carrito</span></a>
-            <a id="login-button" href="./log-in.html"><p>Iniciar sesion</p></a>
+            <a id="login-button" href="./log-in.html"><p>Iniciar sesión</p></a>
         </nav>
     </header>
 
-        <main>
-            <section class="login">
-                <h2>Iniciar sesión</h2>
+    <main>
+        <section class="login">
+            <h2>Iniciar sesión</h2>
                 <p>
                     Ingresa a tu cuenta de HuertoHogar
                 </p>
-                <form>
+                <form id="loginForm">
                     <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-                    <input type="contraseña" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" maxlength="100" required>
+                    <small id="errorCorreo" class="mensaje-error"></small>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña" minlength="4" maxlength="10" required>
+                    <small id="errorContrasena" class="mensaje-error"></small>
+                    <button type="submit">Iniciar sesión</button>
+                    <p id="mensajeLogin" class="mensaje-login"></p>
                 </form>
-            </section>
-        </main>
+                <div class="opciones-login">
+                    <a href="#">Olvidaste tu contraseña</a>
+                    <p>
+                        ¿No tienes una cuenta?
+                        <a href="./register.html">Regístrate aquí</a>
+                    </p>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>HuertoHogar</h3>
+            <p>Del campo al hogar, productos frescos y saludables.</p>
+            <ul id="RRSS"></ul>
+        </div>
+        <div>
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="./home.html">Inicio</a></li>
+                <li><a href="./about-us.html">Nosotros</a></li>
+                <li><a href="./product/products.html">Productos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Ayuda</h3>
+            <a href="./FAQ.html">Preguntas frecuentes</a>
+            <a href="./contact.html"><p>Contacto</p></a>
+        </div>
+        <div>
+            <h3>Ubicaciones</h3>
+            <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
+        </div>
+    </footer>
+    <script src="./js/log-in.js"></script>
 </body>
 </html>
