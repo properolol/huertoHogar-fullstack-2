@@ -1,1 +1,503 @@
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editar producto | HuertoHogar</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav id="navbar">
+
+        <a href="../home.html">
+
+            <img
+                id="logo-navbar"
+                src="../../img/logo.png.ico"
+                alt="Logo HuertoHogar">
+
+        </a>
+
+
+        <ul>
+
+            <li>
+                <a href="../home.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="../about-us.html">
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a href="../contact.html">
+                    Contacto
+                </a>
+            </li>
+
+            <li>
+                <a href="../blog.html">
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="../product/products.html">
+                    Productos
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a
+            id="cart-button"
+            href="../carrito.html">
+
+            <span>
+                🛒 Carrito
+            </span>
+
+        </a>
+
+
+        <a
+            id="login-button"
+            href="../log-in.html">
+
+            <p>
+                Iniciar sesión
+            </p>
+
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <h1>
+            Editar producto
+        </h1>
+
+
+        <section class="formulario-producto">
+
+            <h2>
+                Modificar información
+            </h2>
+
+
+            <p>
+                Actualiza los datos del producto seleccionado.
+            </p>
+
+
+            <!-- MENSAJE GENERAL -->
+
+            <div
+                id="mensaje-formulario"
+                class="mensaje-formulario"
+                role="alert"
+                aria-live="polite">
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <form
+                id="form-editar-producto"
+                novalidate>
+
+
+                <!-- CÓDIGO -->
+
+                <div class="campo-formulario">
+
+                    <label for="codigo">
+                        Código del producto
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="codigo"
+                        name="codigo"
+                        readonly>
+
+
+                    <small>
+                        El código del producto no se puede modificar.
+                    </small>
+
+
+                    <small
+                        id="error-codigo"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- NOMBRE -->
+
+                <div class="campo-formulario">
+
+                    <label for="nombre">
+                        Nombre del producto
+                        <span>*</span>
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        maxlength="100"
+                        placeholder="Nombre del producto"
+                        required>
+
+
+                    <small
+                        id="error-nombre"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="campo-formulario">
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        maxlength="500"
+                        rows="5"
+                        placeholder="Descripción del producto">
+                    </textarea>
+
+
+                    <small
+                        id="error-descripcion"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- PRECIO -->
+
+                <div class="campo-formulario">
+
+                    <label for="precio">
+                        Precio
+                        <span>*</span>
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="precio"
+                        name="precio"
+                        min="0"
+                        step="0.01"
+                        required>
+
+
+                    <small
+                        id="error-precio"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- STOCK -->
+
+                <div class="campo-formulario">
+
+                    <label for="stock">
+                        Stock disponible
+                        <span>*</span>
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="stock"
+                        name="stock"
+                        min="0"
+                        step="1"
+                        required>
+
+
+                    <small
+                        id="error-stock"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- STOCK CRÍTICO -->
+
+                <div class="campo-formulario">
+
+                    <label for="stock-critico">
+                        Stock crítico
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="stock-critico"
+                        name="stock-critico"
+                        min="0"
+                        step="1">
+
+
+                    <small
+                        id="error-stock-critico"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- CATEGORÍA -->
+
+                <div class="campo-formulario">
+
+                    <label for="categoria">
+                        Categoría
+                        <span>*</span>
+                    </label>
+
+
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required>
+
+                        <option value="">
+                            Seleccione una categoría
+                        </option>
+
+                        <option value="Frutas Frescas">
+                            Frutas Frescas
+                        </option>
+
+                        <option value="Verduras Orgánicas">
+                            Verduras Orgánicas
+                        </option>
+
+                        <option value="Productos Orgánicos">
+                            Productos Orgánicos
+                        </option>
+
+                        <option value="Productos Lácteos">
+                            Productos Lácteos
+                        </option>
+
+                    </select>
+
+
+                    <small
+                        id="error-categoria"
+                        class="mensaje-error">
+                    </small>
+
+                </div>
+
+
+                <!-- IMAGEN -->
+
+                <div class="campo-formulario">
+
+                    <label for="imagen">
+                        Imagen del producto
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="imagen"
+                        name="imagen"
+                        accept="image/png, image/jpeg, image/webp">
+
+
+                    <small>
+                        Selecciona una nueva imagen si deseas cambiarla.
+                    </small>
+
+
+                    <small
+                        id="error-imagen"
+                        class="mensaje-error">
+                    </small>
+
+
+                    <div
+                        id="imagen-actual"
+                        class="vista-previa-imagen">
+                    </div>
+
+
+                    <div
+                        id="vista-previa-imagen"
+                        class="vista-previa-imagen">
+                    </div>
+
+                </div>
+
+
+                <!-- BOTONES -->
+
+                <div class="acciones-formulario">
+
+                    <a href="./products-admin.html">
+                        Cancelar
+                    </a>
+
+
+                    <button
+                        type="submit">
+
+                        Guardar cambios
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div>
+
+            <h3>
+                HuertoHogar
+            </h3>
+
+
+            <p>
+                Del campo al hogar productos frescos y saludables.
+            </p>
+
+
+            <ul id="RRSS"></ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navegación
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <a href="../home.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../about-us.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../product/products.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../blog.html">
+                        Blog
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Ayuda
+            </h3>
+
+
+            <a href="../contact.html">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Ubicaciones
+            </h3>
+
+
+            <a href="../about-us.html#ubicaciones">
+                Ver nuestras ubicaciones
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../../js/edit-product.js"></script>
+
+</body>
+
+</html>

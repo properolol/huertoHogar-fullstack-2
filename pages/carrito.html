@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito - HuertoHogar</title>
+
+    <title>Carrito | HuertoHogar</title>
+
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
     <nav id="navbar">
 
         <a href="./home.html">
-            <img id="logo-navbar" src="../img/logo.ico" alt="Logo HuertoHogar">
+            <img
+                id="logo-navbar"
+                src="../img/logo.png.ico"
+                alt="Logo HuertoHogar"
+            >
         </a>
 
         <ul>
-            <li><a href="./home.html">Inicio</a></li>
-            <li><a href="./about-us.html">Nosotros</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./product/products.html">Productos</a></li>
+
+            <li>
+                <a href="./home.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="./about-us.html">Nosotros</a>
+            </li>
+
+            <li>
+                <a href="./contact.html">Contacto</a>
+            </li>
+
+            <li>
+                <a href="./blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="./product/products.html">Productos</a>
+            </li>
+
         </ul>
 
         <a id="cart-button" href="./carrito.html">
@@ -34,84 +61,60 @@
     </nav>
 
 
-    <!-- Contenido principal -->
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
     <main>
 
         <h1>Mi carrito</h1>
 
         <section class="carrito">
 
-            <!-- Productos del carrito -->
+            <!-- =================================================
+                 PRODUCTOS SELECCIONADOS
+                 ================================================= -->
+
             <div class="carrito-productos">
 
                 <h2>Productos seleccionados</h2>
 
-                <article class="producto-carrito">
+                <div id="lista-carrito">
 
-                    <div class="producto-info">
+                    <!--
+                        JavaScript mostrará aquí
+                        los productos agregados.
+                    -->
 
-                        <img src="../img/manzana.jpg"
-                             alt="Manzanas Fuji">
-
-                        <div>
-                            <h3>Manzanas Fuji</h3>
-                            <p>$1.200 por kg</p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="producto-cantidad">
-
-                        <button type="button">-</button>
-
-                        <span>1</span>
-
-                        <button type="button">+</button>
-
-                    </div>
-
-
-                    <div class="producto-subtotal">
-
-                        <p>Subtotal: $1.200</p>
-
-                    </div>
-
-
-                    <button
-                        type="button"
-                        class="btn-eliminar">
-                        Eliminar
-                    </button>
-
-                </article>
+                </div>
 
             </div>
 
 
-            <!-- Resumen del carrito -->
+            <!-- =================================================
+                 RESUMEN DE COMPRA
+                 ================================================= -->
+
             <aside class="resumen-carrito">
 
                 <h2>Resumen de compra</h2>
 
                 <p>
-                    Subtotal:
-                    <span>$1.200</span>
+                    <span>Subtotal:</span>
+                    <span id="subtotal-carrito">$0</span>
                 </p>
 
                 <p>
-                    IVA:
-                    <span>$228</span>
+                    <span>IVA (19%):</span>
+                    <span id="iva-carrito">$0</span>
                 </p>
 
                 <hr>
 
                 <p class="total-carrito">
                     <strong>Total:</strong>
-                    <span>$1.428</span>
+                    <span id="total-carrito">$0</span>
                 </p>
-
 
                 <div class="acciones-carrito">
 
@@ -119,7 +122,9 @@
                         Seguir comprando
                     </a>
 
-                    <button type="button">
+                    <button
+                        type="button"
+                        id="finalizar-compra">
                         Finalizar compra
                     </button>
 
@@ -132,7 +137,10 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer>
 
         <div>
@@ -155,19 +163,27 @@
             <ul>
 
                 <li>
-                    <a href="./home.html">Inicio</a>
+                    <a href="./home.html">
+                        Inicio
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./about-us.html">Nosotros</a>
+                    <a href="./about-us.html">
+                        Nosotros
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./product/products.html">Productos</a>
+                    <a href="./product/products.html">
+                        Productos
+                    </a>
                 </li>
 
                 <li>
-                    <a href="./blog.html">Blog</a>
+                    <a href="./blog.html">
+                        Blog
+                    </a>
                 </li>
 
             </ul>
@@ -179,12 +195,8 @@
 
             <h3>Ayuda</h3>
 
-            <a href="./FAQ.html">
-                Preguntas frecuentes
-            </a>
-
             <a href="./contact.html">
-                <p>Contacto</p>
+                Contacto
             </a>
 
         </div>
@@ -202,5 +214,13 @@
 
     </footer>
 
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/carrito.js"></script>
+
 </body>
+
 </html>

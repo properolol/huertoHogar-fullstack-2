@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Productos | HuertoHogar</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/main.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav id="navbar">
+
+        <a href="../home.html">
+
+            <img
+                id="logo-navbar"
+                src="../../img/logo.png.ico"
+                alt="Logo HuertoHogar">
+
+        </a>
+
+
+        <ul>
+
+            <li>
+                <a href="../home.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="../about-us.html">
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a href="../contact.html">
+                    Contacto
+                </a>
+            </li>
+
+            <li>
+                <a href="../blog.html">
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="./products.html">
+                    Productos
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a
+            id="cart-button"
+            href="../carrito.html">
+
+            <span>
+                🛒 Carrito
+            </span>
+
+        </a>
+
+
+        <a
+            id="login-button"
+            href="../log-in.html">
+
+            <p>
+                Iniciar sesión
+            </p>
+
+        </a>
+
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+        <h1>
+            Nuestros productos
+        </h1>
+
+
+        <section class="catalogo-productos">
+
+            <h2>
+                Productos frescos y naturales
+            </h2>
+
+
+            <p>
+                Encuentra productos frescos y de calidad
+                directamente para tu hogar.
+            </p>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador-productos">
+
+                <label for="buscar-producto">
+
+                    Buscar producto
+
+                </label>
+
+
+                <input
+                    type="search"
+                    id="buscar-producto"
+                    placeholder="Buscar por nombre, código o categoría..."
+                    autocomplete="off">
+
+
+                <button
+                    type="button"
+                    id="btn-buscar-producto">
+
+                    Buscar
+
+                </button>
+
+            </div>
+
+
+            <!-- FILTRO DE CATEGORÍA -->
+
+            <div class="filtro-categoria">
+
+                <label for="filtro-categoria">
+
+                    Categoría
+
+                </label>
+
+
+                <select id="filtro-categoria">
+
+                    <option value="">
+                        Todas las categorías
+                    </option>
+
+                    <option value="Frutas Frescas">
+                        Frutas Frescas
+                    </option>
+
+                    <option value="Verduras Orgánicas">
+                        Verduras Orgánicas
+                    </option>
+
+                    <option value="Productos Orgánicos">
+                        Productos Orgánicos
+                    </option>
+
+                    <option value="Productos Lácteos">
+                        Productos Lácteos
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PRODUCTOS -->
+
+            <div
+                id="lista-productos"
+                class="lista-productos">
+
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                id="mensaje-sin-productos"
+                style="display: none;">
+
+                <p>
+                    No se encontraron productos.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+
+            <h3>
+                HuertoHogar
+            </h3>
+
+
+            <p>
+                Del campo al hogar productos frescos y saludables.
+            </p>
+
+
+            <ul id="RRSS"></ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Navegación
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <a href="../home.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../about-us.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./products.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../blog.html">
+                        Blog
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Ayuda
+            </h3>
+
+
+            <a href="../contact.html">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Ubicaciones
+            </h3>
+
+
+            <a href="../about-us.html#ubicaciones">
+                Ver nuestras ubicaciones
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../../js/products.js"></script>
+
+</body>
+
+</html>

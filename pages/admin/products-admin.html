@@ -4,57 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrar Productos - HuertoHogar</title>
+
+    <title>Productos | Administración | HuertoHogar</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
+
     <nav id="navbar">
 
         <a href="../home.html">
-            <img id="logo-navbar" src="../../img/logo.ico" alt="Logo HuertoHogar">
+
+            <img
+                id="logo-navbar"
+                src="../../img/logo.png.ico"
+                alt="Logo HuertoHogar">
+
         </a>
+
 
         <ul>
-            <li><a href="../home.html">Inicio</a></li>
-            <li><a href="../about-us.html">Nosotros</a></li>
-            <li><a href="../contact.html">Contacto</a></li>
-            <li><a href="../blog.html">Blog</a></li>
-            <li><a href="../product/products.html">Productos</a></li>
+
+            <li>
+                <a href="../home.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="../about-us.html">
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a href="../contact.html">
+                    Contacto
+                </a>
+            </li>
+
+            <li>
+                <a href="../blog.html">
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="../product/products.html">
+                    Productos
+                </a>
+            </li>
+
         </ul>
 
-        <a id="cart-button" href="../carrito.html">
-            <span>Carrito</span>
+
+        <a
+            id="cart-button"
+            href="../carrito.html">
+
+            <span>
+                🛒 Carrito
+            </span>
+
         </a>
 
-        <a id="login-button" href="../log-in.html">
-            <p>Iniciar sesión</p>
+
+        <a
+            id="login-button"
+            href="../log-in.html">
+
+            <p>
+                Iniciar sesión
+            </p>
+
         </a>
 
     </nav>
 
 
-    <!-- Contenido principal -->
+    <!-- CONTENIDO PRINCIPAL -->
+
     <main>
 
-        <h1>Administración de Productos</h1>
+        <h1>
+            Administración de productos
+        </h1>
+
 
         <section class="administracion-productos">
 
-            <h2>Productos registrados</h2>
+            <h2>
+                Productos registrados
+            </h2>
+
 
             <p>
                 Gestiona los productos disponibles en HuertoHogar.
+                Puedes agregar, editar o eliminar productos.
             </p>
 
 
-            <!-- Acciones -->
+            <!-- ACCIONES -->
+
             <div class="acciones-productos">
 
                 <a href="./new-product.html">
-                    Agregar nuevo producto
+                    + Agregar producto
                 </a>
+
 
                 <a href="./where-house.html">
                     Ver inventario
@@ -63,142 +123,119 @@
             </div>
 
 
-            <!-- Tabla de productos -->
-            <table class="tabla-productos">
+            <!-- BUSCADOR -->
 
-                <thead>
+            <div class="buscador-productos">
 
-                    <tr>
-                        <th>Código</th>
-                        <th>Nombre</th>
-                        <th>Categoría</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                        <th>Acciones</th>
-                    </tr>
+                <label for="buscar-producto">
 
-                </thead>
+                    Buscar producto
 
-                <tbody>
-
-                    <tr>
-
-                        <td>FR001</td>
-
-                        <td>Manzanas Fuji</td>
-
-                        <td>Frutas Frescas</td>
-
-                        <td>$1.200</td>
-
-                        <td>150</td>
-
-                        <td>
-                            <a href="./edit-product.html">
-                                Editar
-                            </a>
-
-                            <button type="button">
-                                Eliminar
-                            </button>
-                        </td>
-
-                    </tr>
+                </label>
 
 
-                    <tr>
-
-                        <td>FR002</td>
-
-                        <td>Naranjas Valencia</td>
-
-                        <td>Frutas Frescas</td>
-
-                        <td>$1.000</td>
-
-                        <td>200</td>
-
-                        <td>
-                            <a href="./edit-product.html">
-                                Editar
-                            </a>
-
-                            <button type="button">
-                                Eliminar
-                            </button>
-                        </td>
-
-                    </tr>
+                <input
+                    type="search"
+                    id="buscar-producto"
+                    placeholder="Buscar por código, nombre o categoría..."
+                    autocomplete="off">
 
 
-                    <tr>
+                <button
+                    type="button"
+                    id="btn-buscar-producto">
 
-                        <td>FR003</td>
+                    Buscar
 
-                        <td>Plátanos Cavendish</td>
+                </button>
 
-                        <td>Frutas Frescas</td>
-
-                        <td>$800</td>
-
-                        <td>250</td>
-
-                        <td>
-                            <a href="./edit-product.html">
-                                Editar
-                            </a>
-
-                            <button type="button">
-                                Eliminar
-                            </button>
-                        </td>
-
-                    </tr>
+            </div>
 
 
-                    <tr>
+            <!-- TABLA -->
 
-                        <td>VR001</td>
+            <div class="tabla-contenedor">
 
-                        <td>Zanahorias Orgánicas</td>
+                <table class="tabla-productos">
 
-                        <td>Verduras Orgánicas</td>
+                    <thead>
 
-                        <td>$900</td>
+                        <tr>
 
-                        <td>100</td>
+                            <th>
+                                Foto
+                            </th>
 
-                        <td>
-                            <a href="./edit-product.html">
-                                Editar
-                            </a>
+                            <th>
+                                Código
+                            </th>
 
-                            <button type="button">
-                                Eliminar
-                            </button>
-                        </td>
+                            <th>
+                                Producto
+                            </th>
 
-                    </tr>
+                            <th>
+                                Categoría
+                            </th>
 
-                </tbody>
+                            <th>
+                                Precio
+                            </th>
 
-            </table>
+                            <th>
+                                Stock
+                            </th>
+
+                            <th>
+                                Acciones
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabla-productos-body">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                id="mensaje-sin-productos"
+                style="display: none;">
+
+                <p>
+                    No se encontraron productos.
+                </p>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
+
     <footer>
 
         <div>
 
-            <h3>HuertoHogar</h3>
+            <h3>
+                HuertoHogar
+            </h3>
+
 
             <p>
                 Del campo al hogar productos frescos y saludables.
             </p>
+
 
             <ul id="RRSS"></ul>
 
@@ -207,24 +244,35 @@
 
         <div>
 
-            <h3>Navegación</h3>
+            <h3>
+                Navegación
+            </h3>
+
 
             <ul>
 
                 <li>
-                    <a href="../home.html">Inicio</a>
+                    <a href="../home.html">
+                        Inicio
+                    </a>
                 </li>
 
                 <li>
-                    <a href="../about-us.html">Nosotros</a>
+                    <a href="../about-us.html">
+                        Nosotros
+                    </a>
                 </li>
 
                 <li>
-                    <a href="../product/products.html">Productos</a>
+                    <a href="../product/products.html">
+                        Productos
+                    </a>
                 </li>
 
                 <li>
-                    <a href="../blog.html">Blog</a>
+                    <a href="../blog.html">
+                        Blog
+                    </a>
                 </li>
 
             </ul>
@@ -234,14 +282,13 @@
 
         <div>
 
-            <h3>Ayuda</h3>
+            <h3>
+                Ayuda
+            </h3>
 
-            <a href="../FAQ.html">
-                Preguntas frecuentes
-            </a>
 
             <a href="../contact.html">
-                <p>Contacto</p>
+                Contacto
             </a>
 
         </div>
@@ -249,7 +296,10 @@
 
         <div>
 
-            <h3>Ubicaciones</h3>
+            <h3>
+                Ubicaciones
+            </h3>
+
 
             <a href="../about-us.html#ubicaciones">
                 Ver nuestras ubicaciones
@@ -258,6 +308,11 @@
         </div>
 
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../../js/productos-admin.js"></script>
 
 </body>
 

@@ -4,103 +4,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Producto - HuertoHogar</title>
+
+    <title>Nuevo producto | HuertoHogar</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
     <nav id="navbar">
 
         <a href="../home.html">
-            <img id="logo-navbar" src="../../img/logo.ico" alt="Logo HuertoHogar">
+
+            <img
+                id="logo-navbar"
+                src="../../img/logo.png.ico"
+                alt="Logo HuertoHogar">
+
         </a>
+
 
         <ul>
-            <li><a href="../home.html">Inicio</a></li>
-            <li><a href="../about-us.html">Nosotros</a></li>
-            <li><a href="../contact.html">Contacto</a></li>
-            <li><a href="../blog.html">Blog</a></li>
-            <li><a href="../product/products.html">Productos</a></li>
+
+            <li>
+                <a href="../home.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="../about-us.html">
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a href="../contact.html">
+                    Contacto
+                </a>
+            </li>
+
+            <li>
+                <a href="../blog.html">
+                    Blog
+                </a>
+            </li>
+
+            <li>
+                <a href="../product/products.html">
+                    Productos
+                </a>
+            </li>
+
         </ul>
 
-        <a id="cart-button" href="../carrito.html">
-            <span>Carrito</span>
+
+        <a
+            id="cart-button"
+            href="../carrito.html">
+
+            <span>
+                Carrito
+            </span>
+
         </a>
 
-        <a id="login-button" href="../log-in.html">
-            <p>Iniciar sesión</p>
+
+        <a
+            id="login-button"
+            href="../log-in.html">
+
+            <p>
+                Iniciar sesión
+            </p>
+
         </a>
 
     </nav>
 
 
-    <!-- Contenido principal -->
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
     <main>
 
-        <h1>Nuevo Producto</h1>
+        <h1>
+            Nuevo producto
+        </h1>
+
 
         <section class="formulario-producto">
 
-            <h2>Registrar producto</h2>
+            <h2>
+                Registrar producto
+            </h2>
 
-            <form id="form-producto">
 
-                <!-- Código -->
+            <p>
+                Completa los datos del producto para incorporarlo
+                al catálogo de HuertoHogar.
+            </p>
+
+
+            <!-- =================================================
+                 MENSAJE GENERAL
+                 ================================================= -->
+
+            <div
+                id="mensaje-formulario"
+                class="mensaje-formulario"
+                role="alert"
+                aria-live="polite">
+            </div>
+
+
+            <!-- =================================================
+                 FORMULARIO
+                 ================================================= -->
+
+            <form
+                id="form-producto"
+                novalidate>
+
+
+                <!-- =================================================
+                     CÓDIGO
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="codigo">
                         Código del producto
+                        <span>*</span>
                     </label>
+
 
                     <input
                         type="text"
                         id="codigo"
                         name="codigo"
                         minlength="3"
+                        maxlength="20"
+                        placeholder="Ej: FR004"
+                        autocomplete="off"
                         required>
+
+
+                    <small
+                        id="error-codigo"
+                        class="mensaje-error">
+                    </small>
 
                 </div>
 
 
-                <!-- Nombre -->
+                <!-- =================================================
+                     NOMBRE
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="nombre">
                         Nombre del producto
+                        <span>*</span>
                     </label>
+
 
                     <input
                         type="text"
                         id="nombre"
                         name="nombre"
                         maxlength="100"
+                        placeholder="Ej: Frutillas Frescas"
                         required>
+
+
+                    <small
+                        id="error-nombre"
+                        class="mensaje-error">
+                    </small>
 
                 </div>
 
 
-                <!-- Descripción -->
+                <!-- =================================================
+                     DESCRIPCIÓN
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="descripcion">
                         Descripción
                     </label>
 
+
                     <textarea
                         id="descripcion"
                         name="descripcion"
-                        maxlength="500"></textarea>
+                        maxlength="500"
+                        rows="5"
+                        placeholder="Describe brevemente el producto...">
+                    </textarea>
+
+
+                    <small
+                        id="error-descripcion"
+                        class="mensaje-error">
+                    </small>
 
                 </div>
 
 
-                <!-- Precio -->
+                <!-- =================================================
+                     PRECIO
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="precio">
                         Precio
+                        <span>*</span>
                     </label>
+
 
                     <input
                         type="number"
@@ -108,17 +238,29 @@
                         name="precio"
                         min="0"
                         step="0.01"
+                        placeholder="Ej: 1500"
                         required>
+
+
+                    <small
+                        id="error-precio"
+                        class="mensaje-error">
+                    </small>
 
                 </div>
 
 
-                <!-- Stock -->
+                <!-- =================================================
+                     STOCK
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="stock">
-                        Stock
+                        Stock disponible
+                        <span>*</span>
                     </label>
+
 
                     <input
                         type="number"
@@ -126,34 +268,57 @@
                         name="stock"
                         min="0"
                         step="1"
+                        placeholder="Ej: 100"
                         required>
+
+
+                    <small
+                        id="error-stock"
+                        class="mensaje-error">
+                    </small>
 
                 </div>
 
 
-                <!-- Stock crítico -->
+                <!-- =================================================
+                     STOCK CRÍTICO
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="stock-critico">
                         Stock crítico
                     </label>
 
+
                     <input
                         type="number"
                         id="stock-critico"
                         name="stock-critico"
                         min="0"
-                        step="1">
+                        step="1"
+                        placeholder="Ej: 20">
+
+
+                    <small
+                        id="error-stock-critico"
+                        class="mensaje-error">
+                    </small>
 
                 </div>
 
 
-                <!-- Categoría -->
+                <!-- =================================================
+                     CATEGORÍA
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="categoria">
                         Categoría
+                        <span>*</span>
                     </label>
+
 
                     <select
                         id="categoria"
@@ -164,52 +329,92 @@
                             Seleccione una categoría
                         </option>
 
-                        <option value="frutas">
+                        <option value="Frutas Frescas">
                             Frutas Frescas
                         </option>
 
-                        <option value="verduras">
+                        <option value="Verduras Orgánicas">
                             Verduras Orgánicas
                         </option>
 
-                        <option value="organicos">
+                        <option value="Productos Orgánicos">
                             Productos Orgánicos
                         </option>
 
-                        <option value="lacteos">
+                        <option value="Productos Lácteos">
                             Productos Lácteos
                         </option>
 
                     </select>
 
+
+                    <small
+                        id="error-categoria"
+                        class="mensaje-error">
+                    </small>
+
                 </div>
 
 
-                <!-- Imagen -->
+                <!-- =================================================
+                     IMAGEN
+                     ================================================= -->
+
                 <div class="campo-formulario">
 
                     <label for="imagen">
                         Imagen del producto
                     </label>
 
+
                     <input
                         type="file"
                         id="imagen"
                         name="imagen"
-                        accept="image/*">
+                        accept="image/png, image/jpeg, image/webp">
+
+
+                    <small>
+                        Formatos permitidos: JPG, PNG o WEBP.
+                    </small>
+
+
+                    <small
+                        id="error-imagen"
+                        class="mensaje-error">
+                    </small>
+
+
+                    <!-- Vista previa -->
+
+                    <div
+                        id="vista-previa-imagen"
+                        class="vista-previa-imagen">
+
+                    </div>
 
                 </div>
 
 
-                <!-- Botones -->
+                <!-- =================================================
+                     BOTONES
+                     ================================================= -->
+
                 <div class="acciones-formulario">
 
-                    <a href="./products-admin.html">
+                    <a
+                        href="./products-admin.html">
+
                         Cancelar
+
                     </a>
 
-                    <button type="submit">
+
+                    <button
+                        type="submit">
+
                         Guardar producto
+
                     </button>
 
                 </div>
@@ -221,16 +426,23 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer>
 
         <div>
 
-            <h3>HuertoHogar</h3>
+            <h3>
+                HuertoHogar
+            </h3>
+
 
             <p>
                 Del campo al hogar productos frescos y saludables.
             </p>
+
 
             <ul id="RRSS"></ul>
 
@@ -239,24 +451,35 @@
 
         <div>
 
-            <h3>Navegación</h3>
+            <h3>
+                Navegación
+            </h3>
+
 
             <ul>
 
                 <li>
-                    <a href="../home.html">Inicio</a>
+                    <a href="../home.html">
+                        Inicio
+                    </a>
                 </li>
 
                 <li>
-                    <a href="../about-us.html">Nosotros</a>
+                    <a href="../about-us.html">
+                        Nosotros
+                    </a>
                 </li>
 
                 <li>
-                    <a href="../product/products.html">Productos</a>
+                    <a href="../product/products.html">
+                        Productos
+                    </a>
                 </li>
 
                 <li>
-                    <a href="../blog.html">Blog</a>
+                    <a href="../blog.html">
+                        Blog
+                    </a>
                 </li>
 
             </ul>
@@ -266,14 +489,13 @@
 
         <div>
 
-            <h3>Ayuda</h3>
+            <h3>
+                Ayuda
+            </h3>
 
-            <a href="../FAQ.html">
-                Preguntas frecuentes
-            </a>
 
             <a href="../contact.html">
-                <p>Contacto</p>
+                Contacto
             </a>
 
         </div>
@@ -281,7 +503,10 @@
 
         <div>
 
-            <h3>Ubicaciones</h3>
+            <h3>
+                Ubicaciones
+            </h3>
+
 
             <a href="../about-us.html#ubicaciones">
                 Ver nuestras ubicaciones
@@ -290,6 +515,13 @@
         </div>
 
     </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../../js/new-product.js"></script>
 
 </body>
 
