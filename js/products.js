@@ -218,6 +218,26 @@ function mostrarToast(mensaje, esError = false) {
 }
 
 /* =========================================================
+   ACTUALIZAR CONTADOR DEL CARRITO EN EL NAVBAR
+   ========================================================= */
+
+function actualizarContadorCarritoNavbar() {
+    const cartSpan = document.getElementById("cart-span");
+    if (!cartSpan) return;
+
+    const carrito = cargarCarrito();
+    const totalUnidades = carrito.reduce(function (acumulador, item) {
+        return acumulador + Number(item.cantidad || 0);
+    }, 0);
+
+    if (totalUnidades <= 0) {
+        cartSpan.textContent = "Carrito";
+    } else {
+        cartSpan.textContent = totalUnidades === 1 ? "1 ítem" : `${totalUnidades} ítems`;
+    }
+}
+
+/* =========================================================
    AGREGAR AL CARRITO (COMPATIBLE CON RAMA DE NACHO)
    ========================================================= */
 
@@ -243,10 +263,6 @@ function agregarAlCarrito(codigo) {
     });
 
     if (productoCarrito) {
-        if (productoCarrito.cantidad >= Number(producto.stock)) {
-            mostrarToast("No puedes agregar más unidades de las disponibles en stock (" + producto.stock + ").", true);
-            return;
-        }
         productoCarrito.cantidad++;
     } else {
         carrito.push({
@@ -258,8 +274,21 @@ function agregarAlCarrito(codigo) {
         });
     }
 
+    // Descontar una unidad del stock del producto
+    producto.stock = Number(producto.stock) - 1;
+
+    // Guardar cambios en LocalStorage (productos con nuevo stock y carrito actualizado)
+    localStorage.setItem("productos", JSON.stringify(productos));
     guardarCarrito(carrito);
-    mostrarToast(producto.nombre + " agregado al carrito.");
+
+    // Actualizar contador del carrito en el navbar
+    actualizarContadorCarritoNavbar();
+
+    // Notificar al usuario con el stock restante
+    mostrarToast(`${producto.nombre} agregado al carrito (Stock restante: ${producto.stock}).`);
+
+    // Re-renderizar el catálogo en tiempo real manteniendo filtros y búsqueda
+    mostrarProductos(obtenerProductosFiltrados());
 }
 
 /* =========================================================
@@ -483,6 +512,7 @@ function aplicarFiltroDesdeURL() {
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
+    actualizarContadorCarritoNavbar();
     aplicarFiltroDesdeURL();
     const productos = obtenerProductosFiltrados();
     mostrarProductos(productos);

@@ -1,52 +1,101 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="es">
+
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>detalles producto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto | HuertoHogar</title>
+    <link rel="icon" href="../../img/logo.ico">
+    <link rel="stylesheet" href="../../css/product-detail.css">
 </head>
+
 <body>
-    <nav id="navbar">
-        <a href="./home.html"><img id="logo-navbar" src="./../img/logo.ico" alt="logo"></a>
-        <ul>
-            <li><a href="./home.html">Inicio</a></li>
-            <li><a href="./about-us.html">Nosotros</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./product/products.html">Productos</a></li>
-        </ul>
-        <a id="cart-button" href="./carrito.html"><img src="" alt=""><span>Carrito</span></a>
-        <a id="login-button" href="./log-in.html"><p>Iniciar sesion</p></a>
-    </nav>
 
+    <!-- NAVBAR -->
+    <header>
+        <nav id="navbar">
+            <a href="../home.html">
+                <img id="logo-navbar" src="../../img/logo.ico" alt="Logo HuertoHogar">
+            </a>
+            <ul>
+                <li><a href="../home.html">Inicio</a></li>
+                <li><a href="../about-us.html">Nosotros</a></li>
+                <li><a href="./products.html" style="color: var(--verde-principal); font-weight: 700;">Productos</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../contact.html">Contacto</a></li>
+            </ul>
+            <a id="cart-button" href="../carrito.html">
+                <span id="cart-span">Carrito</span>
+            </a>
+            <a id="login-button" href="../log-in.html">
+                <p>Iniciar sesión</p>
+            </a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
+        <!-- BOTÓN RETORNO -->
+        <a href="./products.html" class="btn-volver-catalogo">← Volver al catálogo</a>
 
+        <!-- CONTENEDOR DINÁMICO DEL DETALLE -->
+        <section id="contenedor-detalle" class="detalle-producto-layout">
+            <!-- Renderizado dinámico desde JavaScript -->
+        </section>
+
+        <!-- MENSAJE DE PRODUCTO NO ENCONTRADO -->
+        <div id="producto-no-encontrado" style="display: none; text-align: center; padding: 60px 20px; background-color: var(--blanco); border-radius: 20px; margin: 30px 0; border: 1px dashed var(--gris);">
+            <p style="font-size: 3rem; margin-bottom: 15px;">🥕</p>
+            <h2 style="color: var(--verde-principal); margin-bottom: 10px;">Producto no encontrado</h2>
+            <p style="color: var(--texto-secundario); margin-bottom: 25px;">El producto que estás buscando no existe o fue retirado de nuestro catálogo.</p>
+            <a href="./products.html" class="btn-volver-catalogo" style="margin: 0 auto;">Ver todos los productos disponibles</a>
+        </div>
+
+        <!-- SECCIÓN DE PRODUCTOS RECOMENDADOS -->
+        <section id="seccion-recomendados" class="seccion-recomendados">
+            <!-- Renderizado dinámico desde JavaScript -->
+        </section>
     </main>
 
+    <!-- TOAST NOTIFICACIÓN -->
+    <div id="toast-notificacion" class="toast-notificacion">
+        <span id="toast-icono">✓</span>
+        <span id="toast-texto">Producto agregado al carrito</span>
+    </div>
+
+    <!-- FOOTER INSTITUCIONAL -->
     <footer>
         <div>
-            <h3>huerto hogar</h3>
-            <p>Del campo al hogar productos frescos y saludables.</p>
-            <ul id="RRSS"></ul>
+            <h3>HuertoHogar</h3>
+            <p>Del campo chileno directo a tu hogar. Conectamos comunidades promoviendo un estilo de vida saludable y sostenible.</p>
         </div>
         <div>
             <h3>Navegación</h3>
             <ul>
-                <li><a href="./home.html">Inicio</a></li>
-                <li><a href="./about-us.html">Nosotros</a></li>
-                <li><a href="./product/products.html">Productos</a></li>
-                <li><a href="./blog.html">Blog</a></li> 
+                <li><a href="../home.html">Inicio</a></li>
+                <li><a href="../about-us.html">Nosotros</a></li>
+                <li><a href="./products.html">Productos</a></li>
+                <li><a href="../blog.html">Blog</a></li>
             </ul>
         </div>
         <div>
-            <h3>ayuda</h3>
-            <a href="./FAQ.html">Preguntas frecuentes</a>
-            <a href="./contact.html"><p>Contacto</p></a>
+            <h3>Ayuda y Soporte</h3>
+            <ul>
+                <li><a href="../FAQ.html">Preguntas Frecuentes</a></li>
+                <li><a href="../contact.html">Contacto y Consultas</a></li>
+                <li><a href="../about-us.html#valores">Políticas de Calidad</a></li>
+            </ul>
         </div>
         <div>
-            <h3>ubicaciones</h3>
-            <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
+            <h3>Nuestras Sedes</h3>
+            <p>Santiago, Viña del Mar, Valparaíso, Concepción, Villarrica, Nacimiento y Puerto Montt.</p>
+            <p><a href="../about-us.html#ubicaciones" style="text-decoration: underline; font-weight: 600;">Ver mapa de sucursales ➔</a></p>
         </div>
     </footer>
+
+    <!-- SCRIPT DE DETALLE -->
+    <script src="../../js/product-detail.js"></script>
+
 </body>
+
 </html>
