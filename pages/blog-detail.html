@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Noticias | HuertoHogar</title>
+    <title>Artículo | Blog HuertoHogar</title>
     <meta name="description"
-        content="Artículos educativos, consejos del huerto y datos curiosos sobre alimentación saludable y sostenibilidad campesina en Chile.">
+        content="Lee nuestro artículo completo sobre alimentación saludable, sostenibilidad campesina y secretos del huerto orgánico en Chile.">
     <link rel="icon" type="image/x-icon" href="../img/logo.ico">
     <link rel="stylesheet" href="../css/blog.css">
 </head>
@@ -37,64 +37,57 @@
     </nav>
 
     <!-- =========================================================
-         CONTENIDO PRINCIPAL
+         CONTENIDO PRINCIPAL DEL DETALLE
          ========================================================= -->
-    <main class="blog-main">
+    <main class="blog-detail-main">
 
-        <!-- 1. HERO SECTION & BUSCADOR -->
-        <section class="blog-hero">
-            <div class="blog-badge-top">
-                <span>🌱</span> Noticias & Consejos del Huerto
-            </div>
-            <h1>Alimentación Consciente & Vida Sana</h1>
-            <p class="blog-hero-desc">
-                Aprende sobre agricultura ecológica chilena, estacionalidad de frutas y verduras, recetas nutritivas y
-                secretos para conservar tus alimentos frescos por más tiempo.
-            </p>
+        <!-- BOTÓN DE RETORNO -->
+        <a href="./blog.html" class="btn-volver-blog">
+            ← Volver a todos los artículos
+        </a>
 
-            <div class="blog-filtros-bloque">
-                <!-- BUSCADOR -->
-                <div class="blog-buscador-caja">
-                    <span class="blog-buscador-icono">🔍</span>
-                    <input type="text" id="buscar-blog" placeholder="Buscar por tema, palabra clave o autor..."
-                        autocomplete="off">
-                </div>
+        <!-- CONTENEDOR DEL ARTÍCULO COMPLETO -->
+        <article id="articulo-detalle-contenedor" class="detalle-articulo-box">
+            <!-- Inyectado dinámicamente por js/blog-detail.js -->
+        </article>
 
-                <!-- CHIPS DE CATEGORÍAS -->
-                <div class="blog-chips-contenedor">
-                    <button type="button" class="btn-categoria-chip activo" data-categoria="Todos">Todos</button>
-                    <button type="button" class="btn-categoria-chip"
-                        data-categoria="Alimentación Saludable">Alimentación Saludable</button>
-                    <button type="button" class="btn-categoria-chip"
-                        data-categoria="Sostenibilidad">Sostenibilidad</button>
-                    <button type="button" class="btn-categoria-chip" data-categoria="Consejos del Hogar">Consejos del
-                        Hogar</button>
-                    <button type="button" class="btn-categoria-chip"
-                        data-categoria="Superalimentos">Superalimentos</button>
-                </div>
+        <!-- MENSAJE DE ERROR SI EL ID NO EXISTE -->
+        <div id="articulo-no-encontrado" class="mensaje-vacio-blog" style="display: none; margin-bottom: 40px;">
+            <p style="font-size: 2rem;">📰</p>
+            <h3>Artículo no encontrado</h3>
+            <p>El artículo solicitado no existe o fue reubicado.</p>
+            <a href="./blog.html" class="btn-leer-destacado" style="display: inline-block; margin-top: 14px;">Ir al
+                Blog</a>
+        </div>
+
+        <!-- PRODUCTOS RELACIONADOS MENCIONADOS EN LA NOTA -->
+        <section id="productos-relacionados-seccion" class="productos-relacionados-seccion" style="display: none;">
+            <h3>🌿 Cosechas Frescas Mencionadas en esta Nota</h3>
+            <p class="seccion-sub">Lleva a tu mesa los ingredientes recomendados en este artículo directamente de
+                nuestros productores.</p>
+            <div id="lista-productos-relacionados" class="lista-prod-rel-grid">
+                <!-- Tarjetas de productos inyectadas por JS -->
             </div>
         </section>
 
-        <!-- 2. ARTÍCULO DESTACADO (RENDERIZADO DINÁMICAMENTE) -->
-        <section id="articulo-destacado-contenedor" class="articulo-destacado-seccion">
-            <!-- Se llena con JavaScript -->
-        </section>
-
-        <!-- 3. GRILLA DE ARTÍCULOS -->
-        <section class="seccion-articulos-recientes">
-            <h2>Todas las Publicaciones</h2>
-
-            <div id="lista-articulos" class="lista-articulos-grid">
-                <!-- Tarjetas inyectadas por JS -->
-            </div>
-
-            <div id="mensaje-sin-articulos" class="mensaje-vacio-blog" style="display: none;">
-                <p style="font-size: 1.5rem; margin-bottom: 8px;">🔍</p>
-                <p>No se encontraron artículos que coincidan con tu búsqueda.</p>
+        <!-- OTRAS NOTAS SUGERIDAS -->
+        <section class="seccion-otras-notas">
+            <h3>Continúa Leyendo en Nuestro Blog</h3>
+            <div id="otras-notas-grid" class="otras-notas-grid">
+                <!-- Sugerencias inyectadas por JS -->
             </div>
         </section>
 
     </main>
+
+    <!-- =========================================================
+         TOAST FEEDBACK DE COMPRA
+         ========================================================= -->
+    <div id="toast-notificacion" class="toast-notificacion"
+        style="position: fixed; bottom: 25px; right: 25px; background: #1B5E20; color: #fff; padding: 14px 22px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.25); display: none; align-items: center; gap: 10px; z-index: 9999; font-weight: 600;">
+        <span id="toast-icono">✓</span>
+        <span id="toast-texto">Producto añadido al carrito</span>
+    </div>
 
     <!-- =========================================================
          FOOTER INSTITUCIONAL
@@ -137,7 +130,7 @@
 
     <!-- SCRIPTS -->
     <script src="../js/blog-data.js"></script>
-    <script src="../js/blog.js"></script>
+    <script src="../js/blog-detail.js"></script>
 </body>
 
 </html>
