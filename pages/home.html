@@ -1,42 +1,242 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>HuertoHogar | Inicio</title>
-</head>
-<body>
-    <nav id="navbar">
-        <a href="./home.html"><img id="logo-navbar" src="./../img/logo.ico" alt="logo"></a>
-        <ul>
-            <li><a href="./home.html">Inicio</a></li>
-            <li><a href="./about-us.html">Nosotros</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./product/products.html">Productos</a></li>
-        </ul>
-        <a id="cart-button" href="./carrito.html"><img src="" alt=""><span>carrito</span></a>
-        <a id="login-button" href="./log-in.html"><p>Iniciar sesion</p></a>
-    </nav>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuertoHogar | Del Campo Directo a tu Hogar</title>
+    <link rel="icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav id="navbar">
+            <a href="./home.html">
+                <img id="logo-navbar" src="../img/logo.ico" alt="Logo HuertoHogar">
+            </a>
+            <ul>
+                <li><a href="./home.html">Inicio</a></li>
+                <li><a href="./about-us.html">Nosotros</a></li>
+                <li><a href="./product/products.html">Productos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+            </ul>
+            <a id="cart-button" href="./carrito.html">
+                <span>Carrito</span>
+            </a>
+            <a id="login-button" href="./log-in.html">
+                <p>Iniciar sesión</p>
+            </a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <section id="categorias">
-            <h1>Productos del campo a tu hogar</h1>
-            <p>Descubre nuestros productos frescos y saludables.</p>
-            <div id="categorias-container">
-                <a href="./product/products.html#ff"><img src="" alt=""><h2>Frutas Frescas</h2></a>
-                <a href="./product/products.html#vo"><img src="" alt=""><h2>Verduras Orgánicas</h2></a>
-                <a href="./product/products.html#po"><img src="" alt=""><h2>Productos Orgánicos</h2></a>
-                <a href="./product/products.html#pl"><img src="" alt=""><h2>Productos Lácteos</h2></a>
+
+        <!-- HERO BANNER -->
+        <section class="hero-home">
+            <span class="hero-badge">🌱 100% Fresco y Natural Directo del Campo</span>
+            <h1>Del campo directo a la puerta de tu hogar</h1>
+            <p class="hero-subtitulo">
+                Conectamos a las familias chilenas con agricultores locales, garantizando cosechas frescas,
+                sabor inigualable y prácticas sostenibles en cada rincón de Chile.
+            </p>
+            <div class="hero-acciones">
+                <a href="./product/products.html" class="btn-principal">Explorar Catálogo ➔</a>
+                <a href="./about-us.html" class="btn-secundario">Conoce Nuestra Misión</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-numero">+6 Años</span>
+                    <span class="stat-texto">Conectando hogares con el campo</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-numero">+9 Puntos</span>
+                    <span class="stat-texto">Cobertura de entrega en todo Chile</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-numero">100% Local</span>
+                    <span class="stat-texto">Apoyo a productores sostenibles</span>
+                </div>
             </div>
         </section>
+
+        <!-- SECCIÓN CATEGORÍAS -->
+        <section class="seccion-categorias" id="categorias">
+            <div class="seccion-header">
+                <h2>Nuestras Categorías</h2>
+                <p>Alimentos cuidadosamente seleccionados en su punto óptimo de madurez y frescura.</p>
+            </div>
+            <div class="grid-categorias">
+                <a href="./product/products.html?categoria=ff" class="tarjeta-categoria">
+                    <div class="categoria-img-wrap">
+                        <img src="../img/manzanas-fuji.png.png" alt="Frutas Frescas">
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Frutas Frescas</h3>
+                        <p>Manzanas, naranjas y plátanos cosechados al día con la mejor dulzura natural.</p>
+                        <span class="categoria-link">Ver catálogo ➔</span>
+                    </div>
+                </a>
+
+                <a href="./product/products.html?categoria=vo" class="tarjeta-categoria">
+                    <div class="categoria-img-wrap">
+                        <img src="../img/zanahorias-organicas.png.jpg" alt="Verduras Orgánicas">
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Verduras Orgánicas</h3>
+                        <p>Zanahorias, espinacas y pimientos cultivados sin pesticidas ni químicos dañinos.</p>
+                        <span class="categoria-link">Ver catálogo ➔</span>
+                    </div>
+                </a>
+
+                <a href="./product/products.html?categoria=po" class="tarjeta-categoria">
+                    <div class="categoria-img-wrap">
+                        <img src="../img/miel-organica.png.jpg" alt="Productos Orgánicos">
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Productos Orgánicos</h3>
+                        <p>Miel pura de abeja, quinua y superalimentos que nutren a toda tu familia.</p>
+                        <span class="categoria-link">Ver catálogo ➔</span>
+                    </div>
+                </a>
+
+                <a href="./product/products.html?categoria=pl" class="tarjeta-categoria">
+                    <div class="categoria-img-wrap">
+                        <img src="../img/leche-entera.png.jpg" alt="Productos Lácteos">
+                    </div>
+                    <div class="categoria-info">
+                        <h3>Productos Lácteos</h3>
+                        <p>Leche entera de libre pastoreo y derivados elaborados con altos estándares.</p>
+                        <span class="categoria-link">Ver catálogo ➔</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRODUCTOS DESTACADOS -->
+        <section class="seccion-destacados">
+            <div class="seccion-header">
+                <h2>Productos Destacados de Temporada</h2>
+                <p>Descubre los favoritos de nuestros clientes por su calidad insuperable.</p>
+            </div>
+            <div class="grid-productos">
+
+                <!-- Producto 1: Manzanas Fuji -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img class="imagen-producto" src="../img/manzanas-fuji.png.png" alt="Manzanas Fuji">
+                    </div>
+                    <div class="informacion-producto">
+                        <span class="categoria-producto">Frutas Frescas</span>
+                        <h3>Manzanas Fuji</h3>
+                        <p class="descripcion-producto">Manzanas crujientes y dulces del Valle Central, seleccionadas a
+                            mano.</p>
+                        <span class="precio-producto">$1.890</span>
+                        <span class="estado-stock-disponible">Disponible</span>
+                        <a href="./product/product-detail.html?id=FR001" class="btn-agregar-carrito">Ver Detalle</a>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Zanahorias Orgánicas -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img class="imagen-producto" src="../img/zanahorias-organicas.png.jpg"
+                            alt="Zanahorias Orgánicas">
+                    </div>
+                    <div class="informacion-producto">
+                        <span class="categoria-producto">Verduras Orgánicas</span>
+                        <h3>Zanahorias Orgánicas</h3>
+                        <p class="descripcion-producto">Zanahorias frescas de tierra fértil, ideales para jugos,
+                            ensaladas y guisos.</p>
+                        <span class="precio-producto">$1.200</span>
+                        <span class="estado-stock-disponible">Disponible</span>
+                        <a href="./product/product-detail.html?id=VR001" class="btn-agregar-carrito">Ver Detalle</a>
+                    </div>
+                </article>
+
+                <!-- Producto 3: Miel Orgánica -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img class="imagen-producto" src="../img/miel-organica.png.jpg" alt="Miel Orgánica">
+                    </div>
+                    <div class="informacion-producto">
+                        <span class="categoria-producto">Productos Orgánicos</span>
+                        <h3>Miel Orgánica</h3>
+                        <p class="descripcion-producto">Miel multifloral 100% pura y cruda, extraída de colmenas del sur
+                            de Chile.</p>
+                        <span class="precio-producto">$4.500</span>
+                        <span class="estado-stock-disponible">Disponible</span>
+                        <a href="./product/product-detail.html?id=PO001" class="btn-agregar-carrito">Ver Detalle</a>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Leche Entera -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img class="imagen-producto" src="../img/leche-entera.png.jpg" alt="Leche Entera">
+                    </div>
+                    <div class="informacion-producto">
+                        <span class="categoria-producto">Productos Lácteos</span>
+                        <h3>Leche Entera</h3>
+                        <p class="descripcion-producto">Leche fresca de vacas alimentadas a pasto libre, sin
+                            conservantes artificiales.</p>
+                        <span class="precio-producto">$1.100</span>
+                        <span class="estado-stock-disponible">Disponible</span>
+                        <a href="./product/product-detail.html?id=PL001" class="btn-agregar-carrito">Ver Detalle</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN BENEFICIOS -->
+        <section class="seccion-beneficios">
+            <div class="seccion-header">
+                <h2>¿Por qué confiar en HuertoHogar?</h2>
+                <p>Nuestra pasión es llevar lo mejor de la tierra chilena con honestidad y cuidado.</p>
+            </div>
+            <div class="grid-beneficios">
+                <div class="tarjeta-beneficio">
+                    <span class="icono-beneficio">🌿</span>
+                    <h3>100% Fresco y Natural</h3>
+                    <p>Cosechas seleccionadas a mano, garantizando frescura y sabor puro sin procesos químicos
+                        invasivos.</p>
+                </div>
+                <div class="tarjeta-beneficio">
+                    <span class="icono-beneficio">🚚</span>
+                    <h3>Despacho Rápido y Cuidado</h3>
+                    <p>Entregas puntuales en vehículos acondicionados para preservar la cadena de frío y la frescura.
+                    </p>
+                </div>
+                <div class="tarjeta-beneficio">
+                    <span class="icono-beneficio">🤝</span>
+                    <h3>Comercio Justo y Local</h3>
+                    <p>Apoyamos de forma directa a familias de pequeños agricultores, promoviendo el desarrollo
+                        sustentable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER LLAMADO A LA ACCIÓN -->
+        <section class="banner-cta">
+            <h2>Lleva la frescura del campo a tu mesa hoy mismo</h2>
+            <p>Únete a miles de familias chilenas que ya disfrutan de una alimentación saludable, consciente y local.
+            </p>
+            <a href="./product/products.html" class="btn-cta">Ir a la Tienda Ahora ➔</a>
+        </section>
+
     </main>
 
+    <!-- FOOTER INSTITUCIONAL -->
     <footer>
         <div>
-            <h3>huerto hogar</h3>
-            <p>Del campo al hogar productos frescos y saludables.</p>
-            <ul id="RRSS"></ul>
+            <h3>HuertoHogar</h3>
+            <p>Del campo chileno directo a tu hogar. Conectamos comunidades promoviendo un estilo de vida saludable y
+                sostenible.</p>
         </div>
         <div>
             <h3>Navegación</h3>
@@ -44,18 +244,25 @@
                 <li><a href="./home.html">Inicio</a></li>
                 <li><a href="./about-us.html">Nosotros</a></li>
                 <li><a href="./product/products.html">Productos</a></li>
-                <li><a href="./blog.html">Blog</a></li> 
+                <li><a href="./blog.html">Blog</a></li>
             </ul>
         </div>
         <div>
-            <h3>ayuda</h3>
-            <a href="./FAQ.html">Preguntas frecuentes</a>
-            <a href="./contact.html"><p>Contacto</p></a>
+            <h3>Ayuda y Soporte</h3>
+            <ul>
+                <li><a href="./FAQ.html">Preguntas Frecuentes</a></li>
+                <li><a href="./contact.html">Contacto y Consultas</a></li>
+                <li><a href="./about-us.html#valores">Políticas de Calidad</a></li>
+            </ul>
         </div>
         <div>
-            <h3>ubicaciones</h3>
-            <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
+            <h3>Nuestras Sedes</h3>
+            <p>Santiago, Viña del Mar, Valparaíso, Concepción, Villarrica, Nacimiento y Puerto Montt.</p>
+            <p><a href="./about-us.html#ubicaciones" style="text-decoration: underline; font-weight: 600;">Ver mapa de
+                    sucursales ➔</a></p>
         </div>
     </footer>
+
 </body>
+
 </html>
