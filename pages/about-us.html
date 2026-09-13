@@ -1,33 +1,306 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="es">
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Nosotros</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | HuertoHogar</title>
+    <meta name="description" content="Conoce la historia, misión, políticas de calidad y las nuevas sucursales de HuertoHogar. Del campo chileno fresco y sustentable directo a tu mesa.">
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/about-us.css">
 </head>
 <body>
+
+    <!-- =========================================================
+         BARRA DE NAVEGACIÓN PRINCIPAL
+         ========================================================= -->
     <nav id="navbar">
-        <a href="./home.html"><img id="logo-navbar" src="./../img/logo.ico" alt="logo"></a>
+        <a href="./home.html">
+            <img id="logo-navbar" src="../img/logo.ico" alt="HuertoHogar Logo">
+        </a>
         <ul>
             <li><a href="./home.html">Inicio</a></li>
-            <li><a href="./about-us.html">Nosotros</a></li>
+            <li><a href="./about-us.html" class="nav-activo" style="color: var(--verde-principal); font-weight: 700;">Nosotros</a></li>
             <li><a href="./contact.html">Contacto</a></li>
             <li><a href="./blog.html">Blog</a></li>
             <li><a href="./product/products.html">Productos</a></li>
         </ul>
-        <a id="cart-button" href="./carrito.html"><img src="" alt=""><span>Carrito</span></a>
-        <a id="login-button" href="./log-in.html"><p>Iniciar sesion</p></a>
+        <a id="cart-button" href="./carrito.html">
+            🛒 <span id="cart-span">Carrito</span>
+        </a>
+        <a id="login-button" href="./log-in.html">
+            <p>Iniciar sesión</p>
+        </a>
     </nav>
 
-    <main>
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL
+         ========================================================= -->
+    <main class="about-main">
+
+        <!-- 1. HERO SECTION INSTITUCIONAL -->
+        <section class="about-hero">
+            <div class="about-badge-top">
+                <span>🌱</span> Nuestra Identidad & Propósito
+            </div>
+            <h1>Del Campo Chileno a la Mesa de tu Hogar</h1>
+            <p class="about-hero-desc">
+                En <strong>HuertoHogar</strong> acortamos las distancias entre las familias que cultivan la tierra con amor y los hogares que eligen una nutrición consciente, natural y libre de pesticidas sintéticos.
+            </p>
+
+            <!-- CONTADORES DE IMPACTO -->
+            <div class="about-stats-grid">
+                <article class="about-stat-card">
+                    <span class="about-stat-num">+50</span>
+                    <span class="about-stat-label">Familias Agricultoras Asociadas</span>
+                </article>
+                <article class="about-stat-card">
+                    <span class="about-stat-num">100%</span>
+                    <span class="about-stat-label">Cosecha Natural y Sostenible</span>
+                </article>
+                <article class="about-stat-card">
+                    <span class="about-stat-num">7</span>
+                    <span class="about-stat-label">Nuevas Tiendas en Chile</span>
+                </article>
+                <article class="about-stat-card">
+                    <span class="about-stat-num">24-48h</span>
+                    <span class="about-stat-label">De la Huerta a tu Puerta</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- 2. HISTORIA Y MANIFIESTO AGROECOLÓGICO -->
+        <section class="about-historia-seccion">
+            <div class="about-historia-grid">
+                <div class="about-historia-texto">
+                    <h2>Cosechando Futuro, Dignificando el Trabajo Campesino</h2>
+                    <p>
+                        HuertoHogar nació del anhelo de rescatar la pureza de los sabores tradicionales de Chile. Observamos cómo las largas cadenas de distribución convencional encarecían los productos, aumentaban el desperdicio y dejaban una mínima ganancia en las manos de quienes madrugan para trabajar la tierra.
+                    </p>
+                    <p>
+                        Decidimos cambiar ese paradigma creando una red logística transparente y directa. Desde los valles frutícolas de Curicó y Quillota, pasando por los huertos orgánicos de Melipilla, hasta los bosques melíferos de Villarrica y las praderas de Puerto Montt, llevamos alimentos frescos manteniendo intactas sus vitaminas y propiedades nutricionales.
+                    </p>
+                </div>
+
+                <div class="about-manifiesto-card">
+                    <h3><span>🌿</span> Nuestro Manifiesto</h3>
+                    <ul class="about-compromisos-lista">
+                        <li>
+                            <span>✓</span>
+                            <div>
+                                <strong>Comercio Justo:</strong> Pagamos precios dignos a nuestros productores agrícolas, asegurando su estabilidad y desarrollo.
+                            </div>
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            <div>
+                                <strong>Cero Químicos Dañinos:</strong> Solo productos cosechados con abonos naturales, rotación de cultivos y control biológico.
+                            </div>
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            <div>
+                                <strong>Cadena de Frío Garantizada:</strong> Camiones climatizados para que frutas y verduras lleguen crocantes y frescas.
+                            </div>
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            <div>
+                                <strong>Embalaje Consciente:</strong> Uso de cajas biodegradables y empaques reciclables para proteger el medio ambiente.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PILARES: MISIÓN, VISIÓN Y POLÍTICAS DE CALIDAD (#valores) -->
+        <section id="valores" class="about-pilares-seccion">
+            <div class="seccion-encabezado-centro">
+                <h2>Misión, Visión y Políticas de Calidad</h2>
+                <p>Nuestros principios innegociables guían cada decisión, cosecha y entrega en HuertoHogar.</p>
+            </div>
+
+            <div class="pilares-grid">
+                <!-- MISIÓN -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono-caja">🎯</div>
+                    <h3>Nuestra Misión</h3>
+                    <p>
+                        Conectar de manera directa y solidaria a pequeños y medianos agricultores ecológicos con las familias de todo Chile, democratizando el acceso a frutas, verduras, lácteos y alimentos orgánicos de la más alta frescura a precios justos y transparentes.
+                    </p>
+                    <ul class="pilar-lista">
+                        <li>Acceso a nutrición viva y saludable</li>
+                        <li>Impulso a la economía rural chilena</li>
+                        <li>Reducción del desperdicio alimentario</li>
+                    </ul>
+                </article>
+
+                <!-- VISIÓN -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono-caja">🔭</div>
+                    <h3>Nuestra Visión</h3>
+                    <p>
+                        Consolidarnos al año 2030 como la plataforma comunitaria y tecnológica líder en distribución agroecológica de Chile, siendo el referente nacional en consumo responsable, trazabilidad de origen y sostenibilidad ambiental.
+                    </p>
+                    <ul class="pilar-lista">
+                        <li>Cobertura nacional carbono neutral</li>
+                        <li>Comunidad informada y saludable</li>
+                        <li>Pioneros en logística circular</li>
+                    </ul>
+                </article>
+
+                <!-- POLÍTICAS DE CALIDAD -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono-caja">🛡️</div>
+                    <h3>Políticas de Calidad</h3>
+                    <p>
+                        Implementamos estrictos estándares de selección en origen. Cada producto es supervisado desde la siembra hasta la entrega final para garantizar inocuidad, sabor inigualable y máxima durabilidad en el hogar.
+                    </p>
+                    <ul class="pilar-lista">
+                        <li>Inspección organoléptica diaria</li>
+                        <li>Control térmico estricto en bodegas</li>
+                        <li>Garantía de satisfacción y reposición</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. SUCURSALES Y MAPA INTERACTIVO (#ubicaciones) -->
+        <section id="ubicaciones" class="about-sucursales-seccion">
+            <div class="seccion-encabezado-centro">
+                <h2>Nuestras Nuevas Sucursales en Chile</h2>
+                <p>Puntos de venta, centros de acopio y retiro en tienda estratégicamente ubicados en 7 ciudades clave del país.</p>
+            </div>
+
+            <!-- BOTONES DE FILTRO RÁPIDO -->
+            <div id="botones-sucursales" class="botones-sucursales-contenedor">
+                <!-- Se llena dinámicamente con JavaScript -->
+            </div>
+
+            <!-- MAPA + FICHA ACTIVA -->
+            <div class="mapa-interactivo-grid">
+                <!-- MAPA VISUAL CON PINES INTERACTIVOS -->
+                <div class="mapa-visual-caja">
+                    <div class="mapa-visual-header">
+                        <h4>📍 Mapa Geográfico de Sucursales</h4>
+                        <span class="mapa-instruccion">Haz clic en una ciudad o pin</span>
+                    </div>
+                    <div class="mapa-canvas-relativo">
+                        <div class="mapa-wrapper-chile">
+                            <img src="../img/mapa-chile-verde.png" alt="Mapa Verde de Chile - HuertoHogar" class="mapa-imagen-chile">
+                            <div id="mapa-pines-contenedor">
+                                <!-- Pines interactivos inyectados por JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FICHA DE SUCURSAL SELECCIONADA -->
+                <div id="ficha-sucursal-activa" class="ficha-sucursal-caja">
+                    <!-- Detalle inyectado por JS -->
+                </div>
+            </div>
+
+            <!-- DIRECTORIO COMPLETO -->
+            <div class="directorio-titulo-bloque">
+                <h3>Directorio Completo de Tiendas y Bodegas</h3>
+            </div>
+            <div id="grilla-todas-sucursales" class="directorio-grid">
+                <!-- Tarjetas de todas las sucursales inyectadas por JS -->
+            </div>
+        </section>
+
+        <!-- 5. EQUIPO DE DESARROLLO (DUOC UC) -->
+        <section class="about-equipo-seccion">
+            <div class="seccion-encabezado-centro">
+                <h2>Equipo de Desarrollo & Proyecto Duoc UC</h2>
+                <p>El talento multidisciplinario que une tecnología web, diseño y compromiso socioambiental.</p>
+            </div>
+
+            <div class="equipo-grid">
+                <article class="tarjeta-miembro">
+                    <div class="miembro-avatar">💻</div>
+                    <h4>Frontend & Experiencia Web</h4>
+                    <span class="miembro-rol">Arquitectura & UI/UX</span>
+                    <p class="miembro-bio">
+                        Diseño e implementación de interfaces interactivas, catálogo modular dinámico, vistas responsivas y optimización de experiencia de usuario.
+                    </p>
+                    <div class="miembro-skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript ES6+</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-miembro">
+                    <div class="miembro-avatar">📦</div>
+                    <h4>Gestión de Inventario & Admin</h4>
+                    <span class="miembro-rol">Logística & Bodegas</span>
+                    <p class="miembro-bio">
+                        Administración de productos, control de stock crítico, supervisión de bodegas y coordinación del flujo de compras en el carrito.
+                    </p>
+                    <div class="miembro-skills">
+                        <span class="skill-tag">LocalStorage API</span>
+                        <span class="skill-tag">Inventario</span>
+                        <span class="skill-tag">Métricas</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-miembro">
+                    <div class="miembro-avatar">🔒</div>
+                    <h4>Autenticación & Seguridad</h4>
+                    <span class="miembro-rol">Validaciones & Usuarios</span>
+                    <p class="miembro-bio">
+                        Módulos de registro, inicio de sesión seguro, validación estricta de formularios y gestión de credenciales de usuario.
+                    </p>
+                    <div class="miembro-skills">
+                        <span class="skill-tag">Validación JS</span>
+                        <span class="skill-tag">Seguridad Web</span>
+                        <span class="skill-tag">Roles</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-miembro">
+                    <div class="miembro-avatar">🌱</div>
+                    <h4>Agroecología & Calidad</h4>
+                    <span class="miembro-rol">Trazabilidad & Alianzas</span>
+                    <p class="miembro-bio">
+                        Vínculo permanente con familias campesinas, verificación de normas de calidad orgánica y diseño de la cadena de frío sustentable.
+                    </p>
+                    <div class="miembro-skills">
+                        <span class="skill-tag">Comercio Justo</span>
+                        <span class="skill-tag">Buenas Prácticas</span>
+                        <span class="skill-tag">Calidad</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 6. LLAMADO A LA ACCIÓN -->
+        <section class="about-cta-seccion">
+            <h2>¿Listo para disfrutar de alimentos frescos y naturales?</h2>
+            <p>
+                Visita nuestro catálogo en línea y recibe en tu hogar las cosechas más selectas del campo chileno, o encuéntranos en cualquiera de nuestras sucursales.
+            </p>
+            <div class="about-cta-botones">
+                <a href="./product/products.html" class="btn-cta-catalogo">Explorar Catálogo ➔</a>
+                <a href="./contact.html" class="btn-cta-contacto">Escríbenos a Contacto</a>
+            </div>
+        </section>
 
     </main>
 
+    <!-- =========================================================
+         FOOTER INSTITUCIONAL
+         ========================================================= -->
     <footer>
         <div>
-            <h3>huerto hogar</h3>
-            <p>Del campo al hogar productos frescos y saludables.</p>
-            <ul id="RRSS"></ul>
+            <h3>HuertoHogar</h3>
+            <p>Del campo al hogar, productos frescos y saludables cosechados con amor en la tierra chilena.</p>
+            <ul id="RRSS" style="display: flex; gap: 12px; list-style: none; padding: 0; margin-top: 12px;">
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: white;">📷 Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color: white;">📘 Facebook</a></li>
+            </ul>
         </div>
         <div>
             <h3>Navegación</h3>
@@ -35,18 +308,24 @@
                 <li><a href="./home.html">Inicio</a></li>
                 <li><a href="./about-us.html">Nosotros</a></li>
                 <li><a href="./product/products.html">Productos</a></li>
-                <li><a href="./blog.html">Blog</a></li> 
+                <li><a href="./blog.html">Blog</a></li>
             </ul>
         </div>
         <div>
-            <h3>ayuda</h3>
-            <a href="./FAQ.html">Preguntas frecuentes</a>
-            <a href="./contact.html"><p>Contacto</p></a>
+            <h3>Ayuda</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 8px;"><a href="./FAQ.html">Preguntas frecuentes</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+            </ul>
         </div>
         <div>
-            <h3>ubicaciones</h3>
-            <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
+            <h3>Ubicaciones</h3>
+            <p style="margin-bottom: 8px;"><a href="./about-us.html#ubicaciones" style="text-decoration: underline; font-weight: 600;">Ver mapa de sucursales ➔</a></p>
+            <p style="font-size: 0.85rem; opacity: 0.85;">Santiago, Viña del Mar, Valparaíso, Nacimiento, Concepción, Villarrica y Puerto Montt.</p>
         </div>
     </footer>
+
+    <!-- SCRIPT DE LÓGICA DE QUIÉNES SOMOS -->
+    <script src="../js/about-us.js"></script>
 </body>
 </html>
