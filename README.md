@@ -172,6 +172,42 @@ huertoHogar-fullstack-2/
 
 ---
 
+## 🔐 Credenciales y Datos de Prueba por Defecto
+
+Para facilitar la evaluación y prueba de las funcionalidades de autenticación, validación y roles de usuario, se proporcionan las siguientes credenciales y datos de prueba preconfigurados:
+
+### 1. Cuentas de Acceso (Inicio de Sesión - `pages/log-in.html`)
+
+> **Nota de Validación:** El sistema valida que el correo pertenezca a los dominios permitidos (`@duoc.cl`, `@profesor.duoc.cl` o `@gmail.com`) y que la contraseña tenga entre 4 y 10 caracteres.
+
+| Perfil / Rol | Correo Electrónico | Contraseña | Vistas y Permisos Asociados |
+| :--- | :--- | :---: | :--- |
+| **Administrador** | `carlos.munoz@duoc.cl` | `admin123` | Acceso completo al Panel de Control (`pages/admin/home-admin.html`), mantenedor de productos, bodegas y usuarios. |
+| **Vendedor** | `diego.soto@profesor.duoc.cl` | `vend123` | Visualización y gestión de catálogo de productos, existencias y órdenes de compra. |
+| **Cliente** | `camila.rojas@gmail.com` | `pass123` | Navegación de tienda, catálogo, detalle de productos y compra en el carrito (`pages/carrito.html`). |
+
+---
+
+### 2. Datos de Prueba para Formulario de Registro (`pages/register.html`)
+
+Al probar el formulario de registro de nuevos clientes, el sistema ejecuta validaciones estrictas en tiempo real:
+
+* **RUN Chileno (con Algoritmo Módulo 11):**
+  * `19011022K` *(Válido - ejemplo oficial pauta Duoc UC)*
+  * `123456785` *(Válido)*
+  * `111111111` *(Válido)*
+  * `123456789` *(Inválido - activará mensaje de error por dígito verificador erróneo)*
+* **Formatos de Correo Permitidos:**
+  * `estudiante@duoc.cl`
+  * `docente@profesor.duoc.cl`
+  * `cliente@gmail.com`
+* **Geografía Dinámica:**
+  * Seleccionar **"Región Metropolitana de Santiago"** → Se cargarán automáticamente comunas como *Santiago*, *Providencia*, *Las Condes*, *Ñuñoa*, etc.
+  * Seleccionar **"Región de Valparaíso"** → Se cargarán automáticamente comunas como *Valparaíso*, *Viña del Mar*, *Quilpué*, etc.
+* **Contraseña:** Mínimo 4 y máximo 10 caracteres (ej: `clave123`). Ambas casillas deben coincidir.
+
+---
+
 ## 💻 Instrucciones de Instalación y Ejecución Local
 
 Para visualizar y probar la aplicación web localmente:
