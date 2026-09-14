@@ -1,118 +1,4 @@
-const regiones = {
-    "Arica y Parinacota": [
-        "Arica",
-        "Camarones",
-        "Putre",
-        "General Lagos"
-    ],
-
-    "Tarapacá": [
-        "Iquique",
-        "Alto Hospicio",
-        "Pozo Almonte",
-        "Pica"
-    ],
-
-    "Antofagasta": [
-        "Antofagasta",
-        "Calama",
-        "Mejillones",
-        "Tocopilla"
-    ],
-
-    "Atacama": [
-        "Copiapó",
-        "Caldera",
-        "Vallenar",
-        "Diego de Almagro"
-    ],
-
-    "Coquimbo": [
-        "La Serena",
-        "Coquimbo",
-        "Ovalle",
-        "Illapel"
-    ],
-
-    "Valparaíso": [
-        "Valparaíso",
-        "Viña del Mar",
-        "Quilpué",
-        "San Antonio"
-    ],
-
-    "Metropolitana de Santiago": [
-        "Santiago",
-        "Maipú",
-        "Puente Alto",
-        "Las Condes",
-        "La Florida",
-        "Independencia"
-    ],
-
-    "O'Higgins": [
-        "Rancagua",
-        "Machalí",
-        "Rengo",
-        "San Fernando"
-    ],
-
-    "Maule": [
-        "Talca",
-        "Curicó",
-        "Linares",
-        "Constitución"
-    ],
-
-    "Ñuble": [
-        "Chillán",
-        "San Carlos",
-        "Bulnes",
-        "Yungay"
-    ],
-
-    "Biobío": [
-        "Concepción",
-        "Talcahuano",
-        "Los Ángeles",
-        "Coronel"
-    ],
-
-    "La Araucanía": [
-        "Temuco",
-        "Angol",
-        "Villarrica",
-        "Pucón"
-    ],
-
-    "Los Ríos": [
-        "Valdivia",
-        "La Unión",
-        "Río Bueno",
-        "Panguipulli"
-    ],
-
-    "Los Lagos": [
-        "Puerto Montt",
-        "Osorno",
-        "Castro",
-        "Ancud"
-    ],
-
-    "Aysén": [
-        "Coyhaique",
-        "Aysén",
-        "Chile Chico",
-        "Cochrane"
-    ],
-
-    "Magallanes y de la Antártica Chilena": [
-        "Punta Arenas",
-        "Puerto Natales",
-        "Porvenir",
-        "Cabo de Hornos"
-    ]
-};
+const regiones = typeof COMUNAS_POR_REGION !== "undefined" ? COMUNAS_POR_REGION : {};
 
 
 const formulario = document.getElementById("registro-form");
@@ -552,3 +438,7 @@ formulario.addEventListener("submit", function (event) {
     }
 
 });
+
+if (typeof actualizarContadorCarritoNavbarComun === "function") {
+    actualizarContadorCarritoNavbarComun();
+}

@@ -582,6 +582,18 @@ function actualizarCantidadCarrito() {
     contador.textContent =
         cantidadTotal;
 
+    const cartSpan =
+        document.getElementById(
+            "cart-span"
+        );
+
+    if (cartSpan) {
+        cartSpan.textContent =
+            cantidadTotal <= 0
+                ? "Carrito"
+                : (cantidadTotal === 1 ? "1 ítem" : `${cantidadTotal} ítems`);
+    }
+
 }
 
 

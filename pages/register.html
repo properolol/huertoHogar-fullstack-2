@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/register.css">
 </head>
+
 <body>
     <header>
         <nav id="navbar">
@@ -23,8 +27,12 @@
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./product/products.html">Productos</a></li>
             </ul>
-            <a id="car-button" href="./carrito.html"><img src="" alt=""><span>Carrito</span></a>
-            <a id="login-button" href="./log-in.html"><p>Iniciar sesión</p></a>
+            <a id="cart-button" href="./carrito.html">
+                <span id="cart-span">Carrito</span>
+            </a>
+            <a id="login-button" href="./log-in.html">
+                <p>Iniciar sesión</p>
+            </a>
         </nav>
     </header>
 
@@ -37,25 +45,29 @@
             <form id="registro-form" novalidate>
                 <div class="campo-formulario">
                     <label for="run">RUN:</label>
-                    <input type="text" id="run" name="run" placeholder="Ej: 19011022K" minlength="7" maxlength="9" required>
+                    <input type="text" id="run" name="run" placeholder="Ej: 19011022K" minlength="7" maxlength="9"
+                        required>
                     <small id="run-error" class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-formulario">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" maxlength="50" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" maxlength="50"
+                        required>
                     <small id="nombre-error" class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-formulario">
                     <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" maxlength="100" required>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos"
+                        maxlength="100" required>
                     <small id="apellidos-error" class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-formulario">
                     <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" maxlength="100" required>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" maxlength="100"
+                        required>
                     <small id="correo-error" class="mensaje-error"></small>
                 </div>
 
@@ -83,19 +95,22 @@
 
                 <div class="campo-formulario">
                     <label for="direccion">Dirección:</label>
-                    <textarea id="direccion" name="direccion" placeholder="Ingresa tu dirección" maxlength="300" rows="4" required></textarea>
+                    <textarea id="direccion" name="direccion" placeholder="Ingresa tu dirección" maxlength="300"
+                        rows="4" required></textarea>
                     <small id="direccion-error" class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-formulario">
                     <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa una contraseña" minlength="4" maxlength="10" required>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa una contraseña"
+                        minlength="4" maxlength="10" required>
                     <small id="contrasena-error" class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-formulario">
                     <label for="confirmar-contrasena">Confirmar contraseña:</label>
-                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" placeholder="Repite tu contraseña" minlength="4" maxlength="10" required>
+                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena"
+                        placeholder="Repite tu contraseña" minlength="4" maxlength="10" required>
                     <small id="confirmar-contrasena-error" class="mensaje-error"></small>
                 </div>
 
@@ -130,13 +145,19 @@
         <div>
             <h3>Ayuda</h3>
             <a href="./FAQ.html">Preguntas frecuentes</a>
-            <a href="./contact.html"><p>Contacto</p></a>
+            <a href="./contact.html">
+                <p>Contacto</p>
+            </a>
         </div>
         <div>
             <h3>Ubicaciones</h3>
             <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
         </div>
     </footer>
+    <script src="../js/chile-data.js"></script>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/common.js"></script>
     <script src="./js/register.js"></script>
 </body>
+
 </html>

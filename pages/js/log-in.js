@@ -26,9 +26,13 @@ formulario.addEventListener("submit", function(event) {
         formularioValido = false;
 
     } else if (
-        !correo.value.endsWith("@duoc.cl") &&
-        !correo.value.endsWith("@profesor.duoc.cl") &&
-        !correo.value.endsWith("@gmail.com")
+        typeof validarCorreo === "function"
+            ? !validarCorreo(correo.value)
+            : (
+                !correo.value.endsWith("@duoc.cl") &&
+                !correo.value.endsWith("@profesor.duoc.cl") &&
+                !correo.value.endsWith("@gmail.com")
+            )
     ) {
 
         errorCorreo.textContent =
@@ -55,3 +59,7 @@ formulario.addEventListener("submit", function(event) {
         formulario.reset();
     }
 });
+
+if (typeof actualizarContadorCarritoNavbarComun === "function") {
+    actualizarContadorCarritoNavbarComun();
+}

@@ -90,3 +90,7 @@ formulario.addEventListener("submit", function(event) {
     }
 
 });
+
+if (typeof actualizarContadorCarritoNavbarComun === "function") {
+    actualizarContadorCarritoNavbarComun();
+}
