@@ -1,10 +1,10 @@
 const formulario = document.getElementById("loginForm");
 
 const correo = document.getElementById("correo");
-const contraseña = document.getElementById("contraseña");
+const contrasena = document.getElementById("contrasena") || document.getElementById("contraseña");
 
-const errorCorreo = document.getElementById("error-correo");
-const errorContraseña = document.getElementById("error-contraseña");
+const errorCorreo = document.getElementById("errorCorreo") || document.getElementById("error-correo");
+const errorContrasena = document.getElementById("errorContrasena") || document.getElementById("error-contraseña");
 
 formulario.addEventListener("submit", function(event) {
 
@@ -12,8 +12,8 @@ formulario.addEventListener("submit", function(event) {
 
     let formularioValido = true;
 
-    errorCorreo.textContent = "";
-    errorContraseña.textContent = "";
+    if (errorCorreo) errorCorreo.textContent = "";
+    if (errorContrasena) errorContrasena.textContent = "";
 
     if (correo.value.trim() === "") {
 
@@ -37,23 +37,14 @@ formulario.addEventListener("submit", function(event) {
         formularioValido = false;
     }
 
-    if (contraseña.value.trim() === "") {
-
-        errorContraseña.textContent = "Debes ingresar tu contraseña.";
+    if (contrasena && contrasena.value.trim() === "") {
+        if (errorContrasena) errorContrasena.textContent = "Debes ingresar tu contraseña.";
         formularioValido = false;
-
-    } else if (contraseña.value.length < 4) {
-
-        errorContraseña.textContent =
-            "La contraseña debe tener al menos 4 caracteres.";
-
+    } else if (contrasena && contrasena.value.length < 4) {
+        if (errorContrasena) errorContrasena.textContent = "La contraseña debe tener al menos 4 caracteres.";
         formularioValido = false;
-
-    } else if (contraseña.value.length > 10) {
-
-        errorContraseña.textContent =
-            "La contraseña no puede superar los 10 caracteres.";
-
+    } else if (contrasena && contrasena.value.length > 10) {
+        if (errorContrasena) errorContrasena.textContent = "La contraseña no puede superar los 10 caracteres.";
         formularioValido = false;
     }
 

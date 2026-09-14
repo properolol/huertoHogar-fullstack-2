@@ -305,14 +305,17 @@ function mostrarProductos(listaProductos) {
         }
 
 
-        const rutaImagen =
+        let rutaImagen =
             producto.imagen ||
             imagenesProductos[producto.codigo] ||
             "";
 
+        if (rutaImagen && !rutaImagen.startsWith("http") && !rutaImagen.startsWith("data:")) {
+            const nombreArchivo = rutaImagen.split("/").pop();
+            rutaImagen = "../../img/" + nombreArchivo;
+        }
 
         let contenidoImagen = "";
-
 
         if (rutaImagen !== "") {
 
