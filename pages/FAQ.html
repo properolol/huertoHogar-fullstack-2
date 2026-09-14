@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="es">
+
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>bienvenida</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | HuertoHogar</title>
+    <meta name="description"
+        content="Encuentra respuestas a todas tus dudas sobre despachos en Chile, calidad agroecológica de nuestras cosechas, formas de pago seguras y sostenibilidad campesina.">
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/faq.css">
 </head>
+
 <body>
+
+    <!-- =========================================================
+         BARRA DE NAVEGACIÓN PRINCIPAL
+         ========================================================= -->
     <nav id="navbar">
-        <a href="./home.html"><img id="logo-navbar" src="./../img/logo.ico" alt="logo"></a>
+        <a href="./home.html">
+            <img id="logo-navbar" src="../img/logo.ico" alt="HuertoHogar Logo">
+        </a>
         <ul>
             <li><a href="./home.html">Inicio</a></li>
             <li><a href="./about-us.html">Nosotros</a></li>
@@ -15,19 +27,96 @@
             <li><a href="./blog.html">Blog</a></li>
             <li><a href="./product/products.html">Productos</a></li>
         </ul>
-        <a id="cart-button" href="./carrito.html"><img src="" alt=""><span>Carrito</span></a>
-        <a id="login-button" href="./log-in.html"><p>Iniciar sesion</p></a>
+        <a id="cart-button" href="./carrito.html">
+            <span id="cart-span">Carrito</span>
+        </a>
+        <a id="login-button" href="./log-in.html">
+            <p>Iniciar sesión</p>
+        </a>
     </nav>
 
-    <main>
+    <!-- =========================================================
+         CONTENIDO PRINCIPAL FAQ
+         ========================================================= -->
+    <main class="faq-main">
+
+        <!-- 1. HERO SECTION & BUSCADOR INTELIGENTE -->
+        <header class="faq-hero">
+            <div class="faq-badge-top">
+                <span>💬</span> Centro de Ayuda & Respuestas
+            </div>
+            <h1>¿Cómo podemos ayudarte hoy?</h1>
+            <p class="faq-hero-desc">
+                Resolvemos tus preguntas sobre pedidos a domicilio, frescura campesina, pagos seguros y nuestro
+                compromiso con la agricultura ecológica chilena.
+            </p>
+
+            <!-- BUSCADOR -->
+            <div class="faq-buscador-box">
+                <span class="faq-buscador-icono">🔍</span>
+                <input type="text" id="buscar-faq"
+                    placeholder="Buscar por palabra clave (ej. envíos, frescura, pago, Santiago)..." autocomplete="off">
+            </div>
+
+            <!-- CHIPS DE FILTRO POR CATEGORÍAS -->
+            <div class="faq-chips-container">
+                <button type="button" class="faq-chip activo" data-categoria="todas">Todas</button>
+                <button type="button" class="faq-chip" data-categoria="envios">🚚 Envíos & Cobertura</button>
+                <button type="button" class="faq-chip" data-categoria="calidad">🍎 Productos & Calidad</button>
+                <button type="button" class="faq-chip" data-categoria="pagos">💳 Pagos & Carrito</button>
+                <button type="button" class="faq-chip" data-categoria="sostenibilidad">♻️ Sostenibilidad &
+                    Empaques</button>
+                <button type="button" class="faq-chip" data-categoria="sucursales">📍 Tiendas & Soporte</button>
+            </div>
+        </header>
+
+        <!-- 2. BARRA DE CONTROL DE ACORDEÓN -->
+        <div class="faq-controls-bar">
+            <span id="faq-contador-texto" class="faq-contador-texto">Cargando preguntas frecuentes...</span>
+            <button type="button" id="btn-toggle-todos" class="btn-toggle-todos">Expandir todas</button>
+        </div>
+
+        <!-- 3. CONTENEDOR DE PREGUNTAS Y ACORDEONES (INYECTADO POR JS) -->
+        <div id="faq-lista-contenedor">
+            <!-- Renderizado dinámico desde js/faq.js -->
+        </div>
+
+        <!-- 4. MENSAJE CUANDO NO HAY COINCIDENCIAS -->
+        <div id="faq-vacio" class="faq-vacio-bloque" style="display: none;">
+            <div class="faq-vacio-icono">🔍</div>
+            <h3>No encontramos preguntas que coincidan con tu búsqueda</h3>
+            <p>Intenta con otras palabras clave o revisa nuestras categorías principales.</p>
+            <button type="button" id="btn-limpiar-busqueda" class="btn-limpiar-busqueda">Restablecer Búsqueda</button>
+        </div>
+
+        <!-- 5. TARJETA CTA DE SOPORTE DIRECTO -->
+        <section class="faq-contacto-card">
+            <h3>¿Aún tienes dudas o necesitas ayuda personalizada?</h3>
+            <p>
+                Nuestro equipo de atención campesina y soporte técnico está a tu disposición para ayudarte con tus
+                compras, pedidos especiales o convenios institucionales.
+            </p>
+            <div class="faq-contacto-botones">
+                <a href="./contact.html" class="btn-cta-contacto">✉️ Escríbenos al Formulario</a>
+                <a href="./about-us.html#ubicaciones" class="btn-cta-ubicaciones">📍 Ver Nuestras 7 Sucursales</a>
+            </div>
+        </section>
 
     </main>
 
+    <!-- =========================================================
+         FOOTER INSTITUCIONAL
+         ========================================================= -->
     <footer>
         <div>
-            <h3>huerto hogar</h3>
-            <p>Del campo al hogar productos frescos y saludables.</p>
-            <ul id="RRSS"></ul>
+            <h3>HuertoHogar</h3>
+            <p>Del campo al hogar, productos frescos y saludables cosechados con amor en la tierra chilena.</p>
+            <ul id="RRSS" style="display: flex; gap: 12px; list-style: none; padding: 0; margin-top: 12px;">
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: white;">📷
+                        Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color: white;">📘
+                        Facebook</a></li>
+            </ul>
         </div>
         <div>
             <h3>Navegación</h3>
@@ -35,18 +124,28 @@
                 <li><a href="./home.html">Inicio</a></li>
                 <li><a href="./about-us.html">Nosotros</a></li>
                 <li><a href="./product/products.html">Productos</a></li>
-                <li><a href="./blog.html">Blog</a></li> 
+                <li><a href="./blog.html">Blog</a></li>
             </ul>
         </div>
         <div>
-            <h3>ayuda</h3>
-            <a href="./FAQ.html">Preguntas frecuentes</a>
-            <a href="./contact.html"><p>Contacto</p></a>
+            <h3>Ayuda</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 8px;"><a href="./FAQ.html"
+                        style="font-weight: 700; color: var(--verde-principal, #A3D9A5);">Preguntas frecuentes</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+            </ul>
         </div>
         <div>
-            <h3>ubicaciones</h3>
-            <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
+            <h3>Ubicaciones</h3>
+            <p style="margin-bottom: 8px;"><a href="./about-us.html#ubicaciones"
+                    style="text-decoration: underline; font-weight: 600;">Ver mapa de sucursales ➔</a></p>
+            <p style="font-size: 0.85rem; opacity: 0.85;">Santiago, Viña del Mar, Valparaíso, Nacimiento, Concepción,
+                Villarrica y Puerto Montt.</p>
         </div>
     </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/faq.js"></script>
 </body>
+
 </html>
