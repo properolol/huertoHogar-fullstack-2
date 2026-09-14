@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo usuario-Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/new-user.css">
+</head>
+<body>
+    <aside class="menu-admin">
+        <div class="logo-admin">
+            <h2>HuertoHogar</h2>
+            <img src="../img/logo.ico" alt="logo-huerto">
+            <p>Administración</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="./home-admin.html">Inicio</a></li>
+                <li><a href="./products-admin.html">Productos</a></li>
+                <li><a href="./users.html" class="activo">Usuarios</a></li>
+                <li><a href="./where-house.html">Ubicaciones</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="contenido-admin">
+        <header class="encabezado-admin">
+            <div>
+                <h1>Nuevo usuario</h1>
+                <p>Registro de un nuevo usuario de HuertoHogar</p>
+            </div>
+
+            <a href="./users.html" class="boton-nuevo">Volver a usuarios</a>
+        </header>
+
+        <section class="seccion-usuarios">
+            <h2>Datos del usuario</h2>
+            <form id="formulario-usuario">
+                <div class="campo-formulario">
+                    <label for="run">RUN</label>
+                    <input type="text" id="run" name="run" maxlength="9" placeholder="Ej: 19011022K">
+                    <small id="error-run"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" placeholder="Ingrese el nombre">
+                    <small id="error-nombre"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" maxlength="100" placeholder="Ingrese los apellidos">
+                    <small id="error-apellidos"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" placeholder="ejemplo@gmail.com">
+                    <small id="error-correo"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                    <small id="error-fecha"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="tipo-usuario">Tipo de usuario</label>
+                    <select name="tipo-usuario" id="tipo-usuario">
+                        <option value="">Seleccione un tipo</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Cliente">Cliente</option>
+                        <option value="Vendedor">Vendedor</option>
+                    </select>
+                    <small id="error-tipo"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="region">Región</label>
+                    <select name="region" id="region">
+                        <option value="">Seleccione una región</option>
+                    </select>
+                    <small id="error-region"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="comuna">Comuna</label>
+                    <select name="comuna" id="comuna">
+                        <option value="">Seleccione una comuna</option>
+                    </select>
+                    <small id="error-comuna"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" maxlength="300" placeholder="Ingrese la dirección">
+                    <small id="error-direccion"></small>
+                </div>
+
+                <div class="botones-formulario">
+                    <button type="submit">Guardar usuario</button>
+                    <a href="./users.html">Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>HuertoHogar</h3>
+            <p>Del campo al hogar, productos frescos y saludables.</p>
+            <ul id="RRSS"></ul>
+        </div>
+        
+        <div>
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="./home-admin.html">Inicio</a></li>
+                <li><a href="./products-admin.html">Productos</a></li>
+                <li><a href="./users.html">Usuarios</a></li>
+                <li><a href="../home.html">Volver a la tienda</a></li>
+            </ul>
+        </div>
+        
+        <div>
+            <h3>Administración</h3>
+            <ul>
+                <li><a href="./new-product.html">Nuevo producto</a></li>
+                <li><a href="./edit-product.html">Editar producto</a></li>
+                <li><a href="./new-user.html">Nuevo usuario</a></li>
+                <li><a href="./edit-user.html">Editar usuario</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../js/new-user.js"></script>
+</body>
+</html>

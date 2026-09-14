@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: #F7F5EF;
+    color: #263238;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#navbar {
+    min-height: 80px;
+    padding: 12px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+#logo-navbar {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nombre-sitio {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: #2E7D32;
+}
+
+
+#navbar ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+}
+
+#navbar ul li a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #263238;
+
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #2E7D32;
+}
+
+
+#car-button,
+#login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#car-button {
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    background-color: #2E7D32;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease;
+}
+
+#car-button:hover {
+    background-color: #1B5E20;
+}
+
+
+#car-button img {
+    display: none;
+}
+
+
+#login-button {
+    color: #2E7D32;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+#login-button:hover {
+    color: #1B5E20;
+}
+
+#login-button p {
+    margin: 0;
+}
+
+
+main {
+    flex: 1;
+
+    padding: 50px 20px 70px;
+}
+
+
+.registro {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    padding: 35px 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.registro h2 {
+    font-family: "Poppins", Arial, sans-serif;
+
+    text-align: center;
+
+    color: #2E7D32;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.registro > p {
+    text-align: center;
+
+    color: #607D8B;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.campo-formulario {
+    margin-bottom: 18px;
+}
+
+
+.campo-formulario label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #263238;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #cfd8dc;
+
+    border-radius: 7px;
+
+    color: #263238;
+
+    font-family: "Open Sans", Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: #2E7D32;
+
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.12);
+}
+
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+    color: #9e9e9e;
+}
+
+
+.campo-formulario textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+.campo-formulario select {
+    cursor: pointer;
+}
+
+
+.campo-formulario select:disabled {
+    background-color: #eeeeee;
+
+    color: #9e9e9e;
+
+    cursor: not-allowed;
+}
+
+
+.mensaje-error {
+    display: block;
+
+    min-height: 18px;
+
+    margin-top: 5px;
+
+    color: #c62828;
+
+    font-size: 12px;
+}
+
+
+#mensaje-registro {
+    min-height: 20px;
+
+    margin: 10px 0 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.registro button[type="submit"] {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2E7D32;
+
+    color: #ffffff;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+.registro button[type="submit"]:hover {
+    background-color: #1B5E20;
+
+    transform: translateY(-1px);
+}
+
+
+.opciones-registro {
+    margin-top: 22px;
+
+    text-align: center;
+
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 18px;
+}
+
+.opciones-registro p {
+    font-size: 13px;
+
+    color: #607D8B;
+}
+
+.opciones-registro a {
+    color: #2E7D32;
+
+    font-weight: 600;
+}
+
+.opciones-registro a:hover {
+    color: #1B5E20;
+
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: #2E7D32;
+
+    color: #ffffff;
+
+    padding: 40px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 35px;
+}
+
+
+footer h3 {
+    font-family: "Poppins", Arial, sans-serif;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+}
+
+
+footer p,
+footer a {
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+footer a {
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+
+footer a:hover {
+    color: #8BC34A;
+}
+
+
+footer ul {
+    list-style: none;
+
+    padding: 0;
+}
+
+
+footer li {
+    margin-bottom: 7px;
+}
+
+
+#RRSS {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 900px) {
+
+    #navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .marca {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    #navbar ul {
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    footer {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #navbar {
+        padding: 15px 20px;
+
+        gap: 15px;
+    }
+
+
+    .marca {
+        justify-content: center;
+    }
+
+
+    .nombre-sitio {
+        font-size: 21px;
+    }
+
+
+    #navbar ul {
+        width: 100%;
+
+        gap: 10px 15px;
+    }
+
+
+    #navbar ul li a {
+        font-size: 13px;
+    }
+
+
+    #car-button {
+        padding: 8px 12px;
+    }
+
+
+    #login-button {
+        font-size: 13px;
+    }
+
+
+    main {
+        padding: 30px 15px 50px;
+    }
+
+
+    .registro {
+        padding: 25px 20px;
+    }
+
+
+    .registro h2 {
+        font-size: 24px;
+    }
+
+
+    footer {
+        grid-template-columns: 1fr;
+
+        padding: 35px 25px;
+    }
+}

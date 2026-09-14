@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario-Admin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/users.css">
+</head>
+<body>
+    <aside class="menu-admin">
+        <div class="logo-admin">
+            <h2>HuertoHogar</h2>
+            <img src="../img/logo.ico" alt="logo-huerto">
+            <p>Administración</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="./home-admin.html">Inicio</a></li>
+                <li><a href="./products-admin.html">Productos</a></li>
+                <li><a href="./users.html" class="activo">Usuarios</a></li>
+                <li><a href="./where-house.html">Ubicaciones</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="contenido-admin">
+        <header class="encabezado-admin">
+            <div>
+                <h1>Usuarios</h1>
+                <p>Administración de usuarios de HuertoHogar</p>
+            </div>
+            <a href="./new-user.html" class="boton-nuevo"> + Nuevo usuario</a>
+        </header>
+
+        <section class="seccion-usuarios">
+            <h2>Listado de usuarios</h2>
+            <div class="tabla-contenedor">
+                <table class="tabla-admin">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Juan Pérez</td>
+                            <td>juan.perez@gmail.com</td>
+                            <td>+56 9 1234 1234</td>
+                            <td>Cliente</td>
+                            <td>
+                                <a href="./edit-user.html" class="boton-editar">Editar</a>
+                                <button type="button" class="boton-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>002</td>
+                            <td>María González</td>
+                            <td>maria.gonzalez@gmail.com</td>
+                            <td>+56 9 2345 6789</td>
+                            <td>Cliente</td>
+                            <td>
+                                <a href="./edit-user.html" class="boton-editar">Editar</a>
+                                <button type="button" class="boton-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>003</td>
+                            <td>Carlos Muñoz</td>
+                            <td>carlos.munoz@duoc.cl</td>
+                            <td>+56 9 3456 7890</td>
+                            <td>Administrador</td>
+                            <td>
+                                <a href="./edit-user.html" class="boton-editar">Editar</a>
+                                <button type="button" class="boton-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>004</td>
+                            <td>Camila Rojas</td>
+                            <td>camila.rojas@gmail.com</td>
+                            <td>+56 9 4567 8901</td>
+                            <td>Cliente</td>
+                            <td>
+                                <a href="./edit-user.html" class="boton-editar">Editar</a>
+                                <button type="button" class="boton-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>005</td>
+                            <td>Diego Soto</td>
+                            <td>diego.soto@profesor.duoc.cl</td>
+                            <td>+56 9 5678 9012</td>
+                            <td>Administrador</td>
+                            <td>
+                                <a href="./edit-user.html" class="boton-editar">Editar</a>
+                                <button type="button" class="boton-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>HuertoHogar</h3>
+            <p>Del campo al hogar, productos frescos y saludables.</p>
+            <ul id="RRSS"></ul>
+        </div>
+        
+        <div>
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="./home-admin.html">Inicio</a></li>
+                <li><a href="./products-admin.html">Productos</a></li>
+                <li><a href="./users.html">Usuarios</a></li>
+                <li><a href="../home.html">Volver a la tienda</a></li>
+            </ul>
+        </div>
+        
+        <div>
+            <h3>Administración</h3>
+            <ul>
+                <li><a href="./new-product.html">Nuevo producto</a></li>
+                <li><a href="./edit-product.html">Editar producto</a></li>
+                <li><a href="./new-user.html">Nuevo usuario</a></li>
+                <li><a href="./edit-user.html">Editar usuario</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../js/users.js"></script>
+</body>
+</html>

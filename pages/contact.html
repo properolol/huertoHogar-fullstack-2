@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="marca">
+                <a href="./home.html"> <img id="logo-navbar" src="./img/logo.ico" alt="logo"></a>
+                <a href="./home.html" class="nombre-sitio">HuertoHogar</a>
+            </div>
+            <ul>
+                <li><a href="./home.html">Inicio</a></li>
+                <li><a href="./about-us.html">Nosotros</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./product/products.html">Productos</a></li>
+            </ul>
+            <a id="car-button" href="./carrito.html"><img src="" alt=""><span>Carrito</span></a>
+            <a id="login-button" href="./log-in.html"><p>Iniciar sesión</p></a>
+        </nav>
+    </header>
+
+        <main>
+            <section class="contacto">
+                <h2>Contáctanos</h2>
+                <p>
+                    ¿Tienes alguna duda?, ¡Nosotros te
+                    podemos ayudar!
+                </p>
+
+            <div class="contenido-contacto">
+                <div class="información">
+                    <h3>Información de contacto</h3>
+                    <p><strong>Telefono:</strong> +56 9 1234 5678</p>
+                    <p><strong>Correo:</strong> contacto@huertohogar.cl</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00</p>
+                    <h3>Presencia en Chile</h3>
+                    <p>
+                        HuertoHogar cuenta con presencia en diferentes ciudades de Chile, entre ellas:
+                    </p>
+                    <ul>
+                        <li>Santiago</li>
+                        <li>Puerto Montt</li>
+                        <li>Villarica</li>
+                        <li>Nacimiento</li>
+                        <li>Viña del Mar</li>
+                        <li>Valparaíso</li>
+                        <li>Concepción</li>
+                    </ul>
+                </div>
+
+                <div class="formulario">
+                    <h3>Envíanos un mensaje</h3>
+                    <form>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="100" required>
+                        <small id="error-nombre"></small>
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo" maxlength="100" required>
+                        <small id="error-correo"></small>
+                        <label for="mensaje">Comentario:</label>
+                        <textarea name="mensaje" id="mensaje" rows="5" maxlength="500" required></textarea>
+                        <small id="error-mensaje"></small>
+                        <button type="submit">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>HuertoHogar</h3>
+            <p>Del campo al hogar, productos frescos y saludables.</p>
+            <ul id="RRSS"></ul>
+        </div>
+        <div>
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="./home.html">Inicio</a></li>
+                <li><a href="./about-us.html">Nosotros</a></li>
+                <li><a href="./product/products.html">Productos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Ayuda</h3>
+            <a href="./FAQ.html">Preguntas frecuentes</a>
+            <a href="./contact.html"><p>Contacto</p></a>
+        </div>
+        <div>
+            <h3>Ubicaciones</h3>
+            <a href="./about-us.html#ubicaciones">Ver nuestras ubicaciones</a>
+        </div>
+    </footer>
+    <script src="./js/contact.js"></script>
+</body>
+</html>
