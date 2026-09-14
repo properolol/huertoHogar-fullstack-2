@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito | HuertoHogar</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav id="navbar">
+
+        <a href="./home.html">
+            <img
+                id="logo-navbar"
+                src="../img/logo.png.ico"
+                alt="Logo HuertoHogar"
+            >
+        </a>
+
+        <ul>
+
+            <li>
+                <a href="./home.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="./about-us.html">Nosotros</a>
+            </li>
+
+            <li>
+                <a href="./contact.html">Contacto</a>
+            </li>
+
+            <li>
+                <a href="./blog.html">Blog</a>
+            </li>
+
+            <li>
+                <a href="./product/products.html">Productos</a>
+            </li>
+
+        </ul>
+
+        <a id="cart-button" href="./carrito.html">
+            <span>Carrito</span>
+        </a>
+
+        <a id="login-button" href="./log-in.html">
+            <p>Iniciar sesión</p>
+        </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <h1>Mi carrito</h1>
+
+        <section class="carrito">
+
+            <!-- =================================================
+                 PRODUCTOS SELECCIONADOS
+                 ================================================= -->
+
+            <div class="carrito-productos">
+
+                <h2>Productos seleccionados</h2>
+
+                <div id="lista-carrito">
+
+                    <!--
+                        JavaScript mostrará aquí
+                        los productos agregados.
+                    -->
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESUMEN DE COMPRA
+                 ================================================= -->
+
+            <aside class="resumen-carrito">
+
+                <h2>Resumen de compra</h2>
+
+                <p>
+                    <span>Subtotal:</span>
+                    <span id="subtotal-carrito">$0</span>
+                </p>
+
+                <p>
+                    <span>IVA (19%):</span>
+                    <span id="iva-carrito">$0</span>
+                </p>
+
+                <hr>
+
+                <p class="total-carrito">
+                    <strong>Total:</strong>
+                    <span id="total-carrito">$0</span>
+                </p>
+
+                <div class="acciones-carrito">
+
+                    <a href="./product/products.html">
+                        Seguir comprando
+                    </a>
+
+                    <button
+                        type="button"
+                        id="finalizar-compra">
+                        Finalizar compra
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div>
+
+            <h3>HuertoHogar</h3>
+
+            <p>
+                Del campo al hogar productos frescos y saludables.
+            </p>
+
+            <ul id="RRSS"></ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Navegación</h3>
+
+            <ul>
+
+                <li>
+                    <a href="./home.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./about-us.html">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./product/products.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./blog.html">
+                        Blog
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Ayuda</h3>
+
+            <a href="./contact.html">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Ubicaciones</h3>
+
+            <a href="./about-us.html#ubicaciones">
+                Ver nuestras ubicaciones
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/carrito.js"></script>
+
+</body>
+
+</html>

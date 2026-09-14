@@ -2,22 +2,17 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <title>Productos | Administración | HuertoHogar</title>
 
-    <title>Bodega | HuertoHogar</title>
-
-    <link
-        rel="stylesheet"
-        href="../../css/main.css">
-
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
 
     <nav id="navbar">
 
@@ -29,6 +24,7 @@
                 alt="Logo HuertoHogar">
 
         </a>
+
 
         <ul>
 
@@ -64,6 +60,7 @@
 
         </ul>
 
+
         <a
             id="cart-button"
             href="../carrito.html">
@@ -73,6 +70,7 @@
             </span>
 
         </a>
+
 
         <a
             id="login-button"
@@ -87,83 +85,45 @@
     </nav>
 
 
+    <!-- CONTENIDO PRINCIPAL -->
+
     <main>
 
         <h1>
-            Gestión de Bodega
+            Administración de productos
         </h1>
 
-        <section class="bodega">
+
+        <section class="administracion-productos">
 
             <h2>
-                Inventario de productos
+                Productos registrados
             </h2>
 
+
             <p>
-                Consulta y controla el stock disponible de los productos
-                registrados en HuertoHogar.
+                Gestiona los productos disponibles en HuertoHogar.
+                Puedes agregar, editar o eliminar productos.
             </p>
 
 
-            <!-- Resumen del inventario -->
+            <!-- ACCIONES -->
 
-            <div class="resumen-inventario">
+            <div class="acciones-productos">
 
-                <article class="tarjeta-inventario">
-
-                    <span>
-                        Total de productos
-                    </span>
-
-                    <strong id="total-productos">
-                        0
-                    </strong>
-
-                </article>
+                <a href="./new-product.html">
+                    + Agregar producto
+                </a>
 
 
-                <article class="tarjeta-inventario">
-
-                    <span>
-                        Stock normal
-                    </span>
-
-                    <strong id="productos-disponibles">
-                        0
-                    </strong>
-
-                </article>
-
-
-                <article class="tarjeta-inventario">
-
-                    <span>
-                        Stock crítico
-                    </span>
-
-                    <strong id="productos-criticos">
-                        0
-                    </strong>
-
-                </article>
-
-
-                <article class="tarjeta-inventario">
-
-                    <span>
-                        Sin stock
-                    </span>
-
-                    <strong id="productos-sin-stock">
-                        0
-                    </strong>
-
-                </article>
+                <a href="./where-house.html">
+                    Ver inventario
+                </a>
 
             </div>
 
 
-            <!-- Buscador -->
+            <!-- BUSCADOR -->
 
             <div class="buscador-productos">
 
@@ -173,12 +133,13 @@
 
                 </label>
 
+
                 <input
                     type="search"
                     id="buscar-producto"
-                    name="buscar-producto"
                     placeholder="Buscar por código, nombre o categoría..."
                     autocomplete="off">
+
 
                 <button
                     type="button"
@@ -191,11 +152,11 @@
             </div>
 
 
-            <!-- Tabla de inventario -->
+            <!-- TABLA -->
 
             <div class="tabla-contenedor">
 
-                <table class="tabla-inventario">
+                <table class="tabla-productos">
 
                     <thead>
 
@@ -226,15 +187,7 @@
                             </th>
 
                             <th>
-                                Stock crítico
-                            </th>
-
-                            <th>
-                                Estado
-                            </th>
-
-                            <th>
-                                Acción
+                                Acciones
                             </th>
 
                         </tr>
@@ -242,7 +195,8 @@
                     </thead>
 
 
-                    <tbody id="tabla-inventario-body">
+                    <tbody id="tabla-productos-body">
+
                     </tbody>
 
                 </table>
@@ -250,12 +204,14 @@
             </div>
 
 
+            <!-- SIN RESULTADOS -->
+
             <div
                 id="mensaje-sin-productos"
                 style="display: none;">
 
                 <p>
-                    No se encontraron productos en el inventario.
+                    No se encontraron productos.
                 </p>
 
             </div>
@@ -265,6 +221,8 @@
     </main>
 
 
+    <!-- FOOTER -->
+
     <footer>
 
         <div>
@@ -273,9 +231,11 @@
                 HuertoHogar
             </h3>
 
+
             <p>
                 Del campo al hogar productos frescos y saludables.
             </p>
+
 
             <ul id="RRSS"></ul>
 
@@ -287,6 +247,7 @@
             <h3>
                 Navegación
             </h3>
+
 
             <ul>
 
@@ -325,6 +286,7 @@
                 Ayuda
             </h3>
 
+
             <a href="../contact.html">
                 Contacto
             </a>
@@ -338,6 +300,7 @@
                 Ubicaciones
             </h3>
 
+
             <a href="../about-us.html#ubicaciones">
                 Ver nuestras ubicaciones
             </a>
@@ -347,7 +310,9 @@
     </footer>
 
 
-    <script src="../../js/where-house.js"></script>
+    <!-- JAVASCRIPT -->
+
+    <script src="../../js/productos-admin.js"></script>
 
 </body>
 
